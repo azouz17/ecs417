@@ -1,6 +1,11 @@
+html{
+  background-color: darkblue;
 
+}
   body{
-    background-color: darkblue;
+    background-color: white;
+    width: 80%;
+    margin: auto;
   }
 
 header{
@@ -8,23 +13,36 @@ header{
   color: white;
   font-weight: bold;
   background-color: darkgreen;
+  width: 75%;
+  margin: auto;
+  text-align: center;
 }
 .underline
 {
   font-weight: bold;
   border-bottom: 1px solid white;
-width: 100%;
+width: 70%;
 display: block;
+margin:auto;
 }
+
+
 article{
   font-size: 13pt;
+  text-align: center;
 }
 section{
   font-size: 13pt;
+  text-align: center;
 }
 img{
   border: double black 5px;
   border-color: black;
+  margin: 10px auto 20px;
+    display: block;
+}
+figcaption{
+  text-align: center;
 }
 a:link{
   text-decoration: underline;
