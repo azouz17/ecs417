@@ -1,0 +1,47 @@
+
+  body{
+    background-color: darkblue;
+  }
+
+header{
+  border-style: double;
+  color: white;
+  font-weight: bold;
+  background-color: darkgreen;
+}
+.underline
+{
+  font-weight: bold;
+  border-bottom: 1px solid white;
+width: 100%;
+display: block;
+}
+article{
+  font-size: 13pt;
+}
+img{
+  border: double black 5px;
+  border-color: black;
+}
+a:link{
+  text-decoration: underline;
+  color:red;
+}
+a:hover
+{
+  text-decoration: underline;
+  color: blue;
+  background-color: white;
+}
+footer{
+  border-top: solid orange 3px;
+  border-left: dashed orange 3px;
+  border-right: dashed orange 3px ;
+  background-color: darkgreen;
+  height: 15px;
+  position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+
+}
