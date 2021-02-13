@@ -19,6 +19,9 @@ display: block;
 article{
   font-size: 13pt;
 }
+section{
+  font-size: 13pt;
+}
 img{
   border: double black 5px;
   border-color: black;
