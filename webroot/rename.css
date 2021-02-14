@@ -1,5 +1,5 @@
 html{
-  background-color: darkblue;
+  background-color: royalblue;
 
 }
   body{
@@ -12,7 +12,7 @@ header{
   border-style: double;
   color: white;
   font-weight: bold;
-  background-color: darkgreen;
+  background-color: rgb(46,138,87);
   width: 75%;
   margin: auto;
   text-align: center;
@@ -52,17 +52,20 @@ a:hover
 {
   text-decoration: underline;
   color: blue;
-  background-color: white;
+  background-color: mediumorchid;
 }
 footer{
-  border-top: solid orange 3px;
-  border-left: dashed orange 3px;
-  border-right: dashed orange 3px ;
-  background-color: darkgreen;
-  height: 15px;
+  border-top: solid mediumorchid 3px;
+  border-left: dashed mediumorchid  3px;
+  border-right: dashed mediumorchid 3px ;
+  background-color: rgb(46,138,87);
+
   position:absolute;
     bottom:0;
-    left:0;
-    width: 100%;
+
+    width: 70%;
+    margin: auto;
+    text-align: center;
+
 
 }
