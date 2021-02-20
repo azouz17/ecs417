@@ -1,0 +1,21 @@
+table{
+  border: solid 2pt black;
+
+}
+th{
+  border: solid 1pt red;
+  font-size: : 15pt;
+  background-color: lightgrey;
+}
+td{
+  border:solid 1pt black;
+}
+img{
+  border: solid 1pt black;
+}
+caption{
+  font-size: 15pt;
+  background-color: red;
+  font-weight: bold
+
+}

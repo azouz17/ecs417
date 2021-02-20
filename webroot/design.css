@@ -1,0 +1,20 @@
+table{
+  border: solid 1pt black
+
+}
+
+td{
+  border: solid 1pt black
+}
+caption{
+  background-color: green;
+  border: single
+  width 40%;
+}
+.s1{
+  background-color: lightgrey;
+
+}
+.s2{
+  background-color: white;
+}
