@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> tshirt website </title>
+  <link rel="stylesheet" href="reser.css" type="text/css"/>
+  <link rel="stylesheet" href="redesign.css" type="text/css"/>
+
+  </head>
+  <body>
+    <form method="post" action="http://webprojects.eecs.qmul.ac.uk/un300/week4/week4_process.php">
+      <fieldset>
+           <legend>Shirt Order Form</legend>
+           <div>
+           <p>
+           <label> Shirt size </label> <br>
+           <select name=" what">
+             <option> Choose a size </option>
+             <option> XS </option>
+             <option> S </option>
+             <option> M </option>
+             <option> L </option>
+             <option> XL </option>
+             </select>
+             </p>
+             <p>
+               <label> Sleeves </label> <br>
+               <input type= "radio" name="sleeve type"  value="1" checked> Short
+               <input type= "radio" name="sleeve type"  value="2" > Long <br>
+               </p>
+               <p>
+               <label>Choose a shirt Colour:</label> <br>
+                     <input type="color" name="colorChoice">
+                     </p>
+                     <p>
+                       <label> Shirt Quantity: </label> <br>
+                       <input type="number" min="1" max="10" name="rate">
+                       </p>
+                       <p>
+                         <label> select the delivery date: </label> <br>
+                         <input type="date">
+                         </p>
+                         </div>
+                         <br>
+                         <br>
+                         <div>
+                         <p>
+                           <label>Enter your name:</label> <br>
+                           <input type="text" name="name">
+                         </p>
+                         <p>
+                           <label>Email:</label> <br>
+                           <input type="email" name="title">
+                         </p>
+                         <p>
+                           <label> Phone number: </label> <br>
+                           <input type="text" name="phone" pattern="[4]{2}[-][0-9]{3}[-][0-9]{3}[-][0-9]{4}" maxlength="15" >
+                            Example: 44-134-526-0847
+                           </p>
+                           </div>
+                           <br>
+                           <br>
+
+                           <div>
+                           <p>
+                             <label> Address: </label><br>
+                             <input type="text" name="address">
+                             </p>
+                             <p>
+                               <label> City: </label> <br>
+                               <input type="text" name="city" list="cities">
+                               <datalist id="cities">
+                                 <option>Cairo</option>
+                                  <option>London</option>
+                                    <option> Dubai</option>
+                                    <option>Washington</option>
+                                  </datalist>
+                                  </p>
+                                  <p>
+                                    <label> Postcode:</label> <br>
+                                    <input type="text" name="Postcode" pattern="[0-9]{6}">
+                                    </p>
+                                    </div>
+                                    <br>
+                                    <label> Keep me informed about future shirt designs</label>
+                                    <input type="checkbox" name="accept">
+                                    <br>
+                                    <label> Submit </label>
+
+                                    <input type="submit">
+                                    <label> Clear Choices </label>
+                                    <input type="reset" name="clear">
+                                    </fieldset>
+                                    </form>
+                                    </body>
+                                    </html>

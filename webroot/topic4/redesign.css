@@ -1,0 +1,24 @@
+div{
+  border: solid 1pt green;
+  border-width: thin;
+  background-color: lightgreen;
+
+}
+input{
+  border: double black;
+}
+legend{
+  border: solid 2pt white;
+  background-color: rgb(50,210,100);
+  width: 50%;
+
+}
+.form-all{
+
+    broder: solid 5pt black
+}
+html{
+  border: solid 2pt black;
+  max-width: 1500px;
+
+}
