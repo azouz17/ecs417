@@ -4,6 +4,18 @@ div{
   background-color: lightgreen;
 
 }
+article{
+  border: solid 1pt green;
+  border-width: thin;
+  background-color: lightgreen;
+
+}
+section{
+  border: solid 1pt green;
+  border-width: thin;
+  background-color: lightgreen;
+
+}
 input{
   border: double black;
 }
