@@ -4,6 +4,7 @@ header{
 }
 html{
   font-size: 1em;
+  font-family:sans-serif;
 }
 div{
   position:absolute;
@@ -30,16 +31,24 @@ div{
 
  }
 figure{
-  float:right;
 
+  float:right;
+}
+.underline
+{
+  font-weight: bold;
+  border-top: 1px solid black ;
+width: 100%;
+display: block;
+margin:auto;
 }
 
 
 
 article{
-  border-top:black solid 0.06em;
+
 float: left;
-margin-top: 10em;
+margin-top: 13em;
 }
 section{
   background-color: rgb(237,235,225);
