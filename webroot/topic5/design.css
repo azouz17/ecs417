@@ -1,0 +1,113 @@
+header{
+  background-color: rgb(144,238,143);
+  border: solid 0.06em black;
+}
+html{
+  font-size: 1em;
+}
+div{
+  position:absolute;
+  left: 18.75em;
+  right:25em;
+}
+.nav1{
+
+  position: absolute;
+  left: 22em;
+  top: 1.875em;
+}
+.nav1 li{
+  display: block;
+  padding: 0.75em 1em;
+
+   display: inline;
+   font-size: 1.2em;
+
+ }
+ .nav2 li{
+  padding: 8px 16px;
+   text-decoration: none;
+
+ }
+figure{
+  float:right;
+
+}
+
+
+
+article{
+  border-top:black solid 0.06em;
+float: left;
+margin-top: 10em;
+}
+section{
+  background-color: rgb(237,235,225);
+  border: solid 0.06em black;
+  padding: 0.75em;
+  position: absolute;
+  top: 15em;
+  left:0em;
+  margin-right: 15em;
+  opacity: 0.6
+
+}
+
+
+
+
+
+.nav2{
+  position: absolute;
+  left:0em;
+  top: 6.25em;
+  border: solid 0.06em black;
+  background-color: rgb(245,245,245);
+  padding-right: 7.75em;
+
+}
+
+ .one{
+  border: solid 0.125em black;
+  padding: 1em;
+  padding-right: 8.75em;
+position: absolute;
+top:25em;
+right:0;
+background-color: rgb(245,245,245);
+margin-left: 15em;
+}
+.two{
+ border: solid 0.1em black;
+ padding-right: 8.4em;
+position: absolute;
+
+top:27em;
+left:0;
+margin-right:15em;
+}
+td{
+  float:left;
+  padding:0.5em;
+}
+th{
+  border: solid 0.125em black;
+  background-color:rgb(144,238,143);
+}
+aside h3{
+  border: 0.06em solid black;
+  background-color: rgb(144,238,143);
+}
+aside{
+  position: absolute;
+  right:0em;
+  top: 6.25em;
+  border: 0.06em solid black;
+  padding: 0.7em;
+  background-color: rgb(245,245,245);
+  margin-left:20em;
+}
+.test{
+  float: left;
+  margin-right: 15em;
+}
