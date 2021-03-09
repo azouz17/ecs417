@@ -8,8 +8,8 @@ html{
 }
 div{
   position:absolute;
-  left: 18.75em;
-  right:25em;
+  margin-left: 18em;
+  margin-right: 18em;
 }
 .nav1{
 
@@ -57,7 +57,7 @@ section{
   position: absolute;
   top: 15em;
   left:0em;
-  margin-right: 15em;
+  width:15em;
   opacity: 0.6
 
 }
@@ -68,15 +68,15 @@ section{
   top: 6.25em;
   border: solid 0.06em black;
   background-color: rgb(245,245,245);
-  padding-right: 7.75em;
+  width:15em;
   margin-right: 15em;
 
 }
 
  .one{
   border: solid 0.125em black;
-  padding: 1em;
-  padding-right: 8.75em;
+  padding: 0.7em;
+  width:16.5em;
 position: absolute;
 top:25em;
 right:0;
@@ -85,10 +85,10 @@ margin-left: 15em;
 }
 .two{
  border: solid 0.1em black;
- padding-right: 8.4em;
+width:16em;
 position: absolute;
 
-top:27em;
+top:28em;
 left:0;
 margin-right:15em;
 }
@@ -112,6 +112,7 @@ aside{
   padding: 0.7em;
   background-color: rgb(245,245,245);
   margin-left:20em;
+  width:15em;
 }
 .test{
   float: left;
