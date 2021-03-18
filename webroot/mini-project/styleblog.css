@@ -1,0 +1,27 @@
+html{
+  background-color: #2C363F;
+  font-family: sans-serif;
+}
+form{
+  position: absolute;
+  top:20em;
+  left: 35em;
+  background-color: #F5F100;
+  width:30%;
+  border: double 2px black;
+}
+h2{
+  color:white;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1em;
+}
+input{
+  padding: 0.4em;
+  background-color: white;
+}
+label{
+  font-weight: bold;
+  padding: 2em;
+}

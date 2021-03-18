@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=character
+comment0.text=\r\n\ Abstract\ class\ character\ -\ write\ a\ description\ of\ the\ class\ here\r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
+comment1.params=
+comment1.target=character()
+comment10.params=
+comment10.target=void\ sethealth()
+comment11.params=
+comment11.target=java.lang.String\ getattacks()
+comment2.params=
+comment2.target=void\ upgrade_attack()
+comment3.params=a
+comment3.target=void\ setboolean(boolean)
+comment4.params=
+comment4.target=boolean\ getboolean()
+comment5.params=a
+comment5.target=void\ attack1(enemy)
+comment6.params=b
+comment6.target=void\ attack2(enemy)
+comment7.params=c
+comment7.target=void\ attack3(enemy)
+comment8.params=
+comment8.target=int\ gethealth()
+comment9.params=hit
+comment9.target=void\ sethealth(int)
+numComments=12

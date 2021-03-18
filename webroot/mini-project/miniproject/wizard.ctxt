@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=wizard
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ wizard\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=wizard()
+comment2.params=e
+comment2.target=void\ attack1(enemy)
+comment3.params=c
+comment3.target=void\ attack2(enemy)
+comment4.params=d
+comment4.target=void\ attack3(enemy)
+comment5.params=
+comment5.target=java.lang.String\ getattacks()
+comment6.params=
+comment6.target=void\ upgrade_attack()
+numComments=7

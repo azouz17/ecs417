@@ -1,0 +1,12 @@
+html{
+  background-color: #99FFE0;
+  font-family: sans-serif;
+}
+form{
+  position: absolute;
+  top:10em;
+  left: 20em;
+  background-color: #D43835;
+  width:60%;
+  border: double 2px black;
+}

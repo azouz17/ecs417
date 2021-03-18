@@ -20,7 +20,7 @@ div{
 .nav1 li{
   display: block;
   padding: 0.75em 1em;
-
+  float: left;
    display: inline;
    font-size: 1.2em;
 
@@ -28,7 +28,8 @@ div{
  .nav2 li{
   padding: 8px 16px;
    text-decoration: none;
-
+   float: left;
+ 
  }
 figure{
 

@@ -1,0 +1,88 @@
+html{
+  color: linen;
+  font-family: sans-serif;
+  background-color: #FEEEC3;
+}
+nav{
+  float: right;
+  position: fixed;
+  top: 0em;
+  left:0em;
+  background-color: #D8B4E2;
+  margin-right: 2em;
+ height: 45em;
+ color: black;
+
+}
+nav section{
+  background-color:#AE759F;
+  opacity: 0.95;
+  font-size: 1.3em;
+  text-align: center;
+  color: linen;
+  border: double 1px white;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+nav td,th{
+  border-bottom: solid 0.5px white;
+  width:50%;
+  padding: 1em;
+  padding-right: 5em;
+  float: left;
+  font-weight: bold;
+}
+div{
+  margin-left: 20em;
+  font-size: 1em;
+  margin-right: 4em;
+margin-bottom: 5em;
+  color:#00B8F5;
+}
+article p,ul{
+  margin-right: 24em;
+}
+#a1,#a2,#a3,#a4{
+margin-bottom: 0.7em;
+
+  background-color: #DEC1FF;
+  margin-top: 3em;
+  font-size: 1.5em;
+}
+
+figcaption{
+  font-style: italic;
+  color: black;
+  opacity: 0.6;
+   font-size: 0.5em;
+   
+}
+
+article table{
+  border:solid 2px white;
+  border-collapse: collapse;
+  padding: 1em;
+}
+article td{
+  padding:0.7em;
+  border: solid 1px white;
+}
+.team{
+  position: absolute;
+  top:48em;
+  right:4em;
+}
+section td{
+      padding:0.5em;
+}
+footer{
+  color:#FB232E ;
+  background-color: #F9B5AC;
+  font-size: 1.2em;
+  width:100%;
+  opacity: 0.5;
+  margin-top: 3em;
+  border: 1px solid black;
+padding: 0.5em;
+}
