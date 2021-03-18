@@ -1,10 +1,12 @@
+/* specify the background color and text color of the html page*/
 html{
   color: linen;
   font-family: sans-serif;
   background-color: #FEEEC3;
 }
+/* for the contents menu to the left of the page. the position is fixed so it appears along all the page.*/
 nav{
-  float: right;
+  float: left;
   position: fixed;
   top: 0em;
   left:0em;
@@ -14,6 +16,7 @@ nav{
  color: black;
 
 }
+/* the text inside the section tag inside the nav container. specifies bg color and text color and other*/
 nav section{
   background-color:#AE759F;
   opacity: 0.95;
@@ -24,7 +27,7 @@ nav section{
   padding: 0.5em;
   margin-bottom: 1em;
 }
-
+/* ensures that the td and th elements inside the nav tag has proper padding and separation from each other is clear by a border*/
 nav td,th{
   border-bottom: solid 0.5px white;
   width:50%;
@@ -33,6 +36,7 @@ nav td,th{
   float: left;
   font-weight: bold;
 }
+/* the main container in the middle of the page that has the main text has a margin with the nav bar to its left and a mrgin with the bottom of the page*/
 div{
   margin-left: 20em;
   font-size: 1em;
@@ -40,9 +44,11 @@ div{
 margin-bottom: 5em;
   color:#00B8F5;
 }
+/* says that any p or ul tag inside an article tag should have a right margin*/
 article p,ul{
   margin-right: 24em;
 }
+/* for all the headers for each section eg:skills,about myself. specifies a top margin and a bottom one and overwrites background color*/
 #a1,#a2,#a3,#a4{
 margin-bottom: 0.7em;
 
@@ -50,15 +56,15 @@ margin-bottom: 0.7em;
   margin-top: 3em;
   font-size: 1.5em;
 }
-
+/* sets the display of the figcaption*/
 figcaption{
   font-style: italic;
   color: black;
   opacity: 0.6;
    font-size: 0.5em;
-   
-}
 
+}
+/* sets the style for the skills table */
 article table{
   border:solid 2px white;
   border-collapse: collapse;
@@ -68,14 +74,17 @@ article td{
   padding:0.7em;
   border: solid 1px white;
 }
+/* positions an image*/
 .team{
   position: absolute;
   top:48em;
   right:4em;
 }
+/* creates propper spacing between td elements*/
 section td{
       padding:0.5em;
 }
+/* styles the footer of the page by setting a bg color, text color, margins, padding and others*/
 footer{
   color:#FB232E ;
   background-color: #F9B5AC;

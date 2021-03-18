@@ -1,7 +1,10 @@
+
+/* specify the background color and text color of the html page*/
 html{
   background-color: #99FFE0;
   font-family: sans-serif;
 }
+/*positions the form in the center of the page*/
 form{
   position: absolute;
   top:10em;

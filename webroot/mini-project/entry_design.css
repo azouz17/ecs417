@@ -1,7 +1,9 @@
+/* Specify the bacjground color of the html and font type */
 html{
   background-color: #DCD6D1;
   font-family: serif;
 }
+/* this is for the add entry button. I change the font inside the button and its position, bg color and text color.*/
 button{
   font-size:1.5em;
   font-weight: bold;
@@ -9,12 +11,14 @@ button{
   background-color: black;
   color:#85E0EA;
 }
+/* for the header of the page */
 h1{
   border: double 1px white;
   width:25%;
   font-weight: bold;
   background-color: #B47555;
 }
+/* this is for the test entry inside the div container*/
 div{
 
 border-spacing: 1em;
@@ -23,9 +27,11 @@ border-spacing: 1em;
   width:70%;
   padding: 1em;
   }
+/* this is for the title of the blog entry*/
   h3{
     font-weight:bold;
 }
+/* for the date of the blog*/
 h6{
   float: right;
   opacity: 0.4;

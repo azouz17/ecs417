@@ -1,7 +1,9 @@
+/* specify the background color and text color of the html page*/
 html{
   background-color: #2C363F;
   font-family: sans-serif;
 }
+/*positions the form in the center of the page*/
 form{
   position: absolute;
   top:20em;
@@ -10,6 +12,7 @@ form{
   width:30%;
   border: double 2px black;
 }
+/* styles the title of the form */
 h2{
   color:white;
   font-size: 1.3em;
@@ -17,6 +20,7 @@ h2{
   text-align: center;
   margin-top: 1em;
 }
+/*sets padding between the input fields*/
 input{
   padding: 0.4em;
   background-color: white;
