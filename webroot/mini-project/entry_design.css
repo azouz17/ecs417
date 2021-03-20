@@ -10,6 +10,7 @@ button{
   float: right;
   background-color: black;
   color:#85E0EA;
+  margin:0.3em;
 }
 /* for the header of the page */
 h1{
@@ -17,6 +18,8 @@ h1{
   width:25%;
   font-weight: bold;
   background-color: #B47555;
+  margin: 0.5em;
+  font-size: 1.3em;
 }
 /* this is for the test entry inside the div container*/
 div{
@@ -26,6 +29,7 @@ border-spacing: 1em;
   border:double 3px #A25653;
   width:70%;
   padding: 1em;
+  margin: 1em
   }
 /* this is for the title of the blog entry*/
   h3{
