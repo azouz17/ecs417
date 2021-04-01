@@ -13,8 +13,12 @@
       <input required type="text" name="name">
       <label> Birthday </lable>
         <input id="b" type="text" name="birthday">
-        <button type="submit" onclick="alert(moment(document.getElementById(b).value, 'MM/DD/YYYY',true).isValid());"> Submit </button>
+        <script>
+         var b=document.getElementById('b')
+         </script>
+        <button type="submit" onclick="isValidateDate(b)"> Submit </button>
       </fielset>
     </form>
 </body>
 </html>
+<!---alert(moment(document.getElementById(b).value, 'MM/DD/YYYY',true).isValid());
