@@ -22,7 +22,9 @@ if ($conn->connect_error) {
 }
 $sql=SELECT username FROM LOGIN;
 $sqls= SELECET password FROM LOGIN;
-if($_GET["username"]!=$sql | $_GET["password"]!=$sqls)
+$u= mysql_query($sql,$conn);
+$p= mysql_query($sqls,$conn);
+if($_GET["username"]!=$u | $_GET["password"]!=$p)
 {
   header(login.html,true,301);
   exit();
