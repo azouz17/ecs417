@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title> TEst</title>
+  <script src="moment.js"></script>
 </head>
 <body>
-  <?php
-  $d="25000";
-  $j="37000";
-  $m="45000"; ?>
-  <table>
-    <tr>
-      <td> Daniel </td>
-      <td> <?php echo $d;?>
-      </tr>
-      <tr>
-        <td> John </td>
-        <td> <?php echo $j;?>
-        </tr><tr>
-          <td> Mark </td>
-          <td> <?php echo $m;?>
-          </tr>
+<form method="post" action="collect.php">
+  <fieldset>
+    <legend> Form</legend>
+    <label> Name </lable>
+      <input required type="text" name="name">
+      <label> Birthday </lable>
+        <input id="b" type="text" name="birthday">
+        <button type="submit" onclick="alert(moment(document.getElementById(b).value, 'MM/DD/YYYY',true).isValid());"> Submit </button>
+      </fielset>
+    </form>
 </body>
 </html>
