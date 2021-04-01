@@ -5,6 +5,20 @@
   <title> TEst</title>
 </head>
 <body>
-  <?php echo "hello"; ?>
+  <?php d=25000;
+  j=37000;
+  m=45000; ?>
+  <table>
+    <tr>
+      <td> Daniel </td>
+      <td> <?php echo d;?>
+      </tr>
+      <tr>
+        <td> John </td>
+        <td> <?php echo j;?>
+        </tr><tr>
+          <td> Mark </td>
+          <td> <?php echo m;?>
+          </tr>
 </body>
 </html>
