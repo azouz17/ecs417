@@ -5,9 +5,10 @@
   <title> TEst</title>
 </head>
 <body>
-  <?php d=25000;
-  j=37000;
-  m=45000; ?>
+  <?php
+  d="25000";
+  j="37000";
+  m="45000"; ?>
   <table>
     <tr>
       <td> Daniel </td>
