@@ -12,14 +12,14 @@
   <table>
     <tr>
       <td> Daniel </td>
-      <td> <?php echo d;?>
+      <td> <?php echo $d;?>
       </tr>
       <tr>
         <td> John </td>
-        <td> <?php echo j;?>
+        <td> <?php echo $j;?>
         </tr><tr>
           <td> Mark </td>
-          <td> <?php echo m;?>
+          <td> <?php echo $m;?>
           </tr>
 </body>
 </html>
