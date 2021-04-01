@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title> TEst</title>
-  <script src="moment.js"></script>
+
 </head>
 <body>
 <?php $a=1;
@@ -12,7 +12,7 @@ while($i <100)
 {
   $a=$a+$i;
 }
-echo $a?>
+echo $a;?>
 </body>
 </html>
 <!---alert(moment(document.getElementById(b).value, 'MM/DD/YYYY',true).isValid());
