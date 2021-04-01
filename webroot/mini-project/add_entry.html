@@ -5,24 +5,26 @@
   <title> Add entry</title>
   <link rel="stylesheet" href="reset.css" type="text/css"/>
     <link rel=" stylesheet" href="style_entry.css" type="text/css"/>
+
   </head>
   <body>
-    <form method="get" action="http://webprojects.eecs.qmul.ac.uk/un300/week4/week4_process.php">
+    <form id="form" method="get" action="http://webprojects.eecs.qmul.ac.uk/un300/week4/week4_process.php" >
       <fieldset>
         <h1> Add Entry: </h1>
         <br>
         <label> Title:</label>
-        <input type="text" title="title">
+        <input id="a1" type="text" title="title">
         <br>
 
         <label> Entry text:</label> <br>
 
-       <textarea id="anything" name="text" rows="10" cols="70"> </textarea>
+       <textarea id="a2" rows="10" cols="70"> </textarea>
        <br>
 
-    <button> <a href="blog.html" style="font-weight:bold"> Submit entry </a></button>
-    <label> Clear  </label>
-    <input type="reset" name="clear">
+    <button id="submit" type="submit" onclick="check()">  Submit entry</button>
+    <button id="cl" type="button" onclick="clear()"> Clear</button>
+
       </fieldset>
+ <script src="clear.js"></script>
       </body>
       </html>

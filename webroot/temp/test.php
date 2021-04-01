@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> TEst</title>
+</head>
+<body>
+  <?php echo "hello"; ?>
+</body>
+</html>
