@@ -24,7 +24,7 @@
      die("Connection failed: " . $conn->connect_error);
     }
     date_default_timezone_set('UTC');
-    $date=date('m/d/Y h:i:s',time());
+    $date=date('Y/m/d h:i:s',time());
     $sql= "INSERT INTO blog (text,title,date)
     VALUES('$text','$title','$date')";
     if ($conn->query($sql) === TRUE) {
