@@ -23,8 +23,10 @@
     if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
     }
+    date_default_timezone_set('UTC');
+    $date=date('m/d/Y h:i:s',time());
     $sql= "INSERT INTO blog (text,title,date)
-    VALUES('$text','$title',date("Y-m-d"))";
+    VALUES('$text','$title','$date')";
     if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
@@ -39,7 +41,7 @@
         hopefully the p container will indent to a new line very soon right about now</p>
         </div>
         <?php
-        $sql="SELECT "
+
       ?>
         </body>
         </html>
