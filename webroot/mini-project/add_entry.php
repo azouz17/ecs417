@@ -20,17 +20,19 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
+echo $_GET["username"];
 $sql="SELECT username FROM LOGIN";
 $sqls= "SELECT password FROM LOGIN";
-
+echo $sql;
+/*
 if($_GET["username"]!=$sql | $_GET["password"]!=$sqls)
 {
   echo "ayhaga";
-  header('login.html',true,301);
+//  header('login.html',true,301);
   exit();
 }
 echo "succesful";
-  session_start();
+  session_start();*/
 $conn->close();
 ?>
     <form id="form" method="get" action="blog.php" >
