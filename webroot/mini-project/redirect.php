@@ -5,7 +5,9 @@
 </head>
 <?php
 $user =$_GET["username"];
+$pass =$_GET["password"];
 echo $user;
+echo"<br>". $pass;
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("DATABASE_USER");
@@ -17,17 +19,18 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT username FROM LOGIN";
+$sql="SELECT username,password FROM LOGIN";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     $row = $result->fetch_assoc();
-        echo "<br> id: ". $row["username"];
+      echo "<br> username: ". $row["username"];
+      echo"<br> password: ". $row["password"] ;
 
 } else {
     echo "0 results";
 }
-if($row["username"]===$user){
+if($row["username"]===$user and $row["password"]===$pass){
   echo "TRUE";
 }
 else{
