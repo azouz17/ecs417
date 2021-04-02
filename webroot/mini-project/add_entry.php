@@ -9,31 +9,7 @@
   </head>
   <body>
     <?php
-    $dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("DATABASE_USER");
-$dbpwd = getenv("DATABASE_PASSWORD");
-$dbname = getenv("DATABASE_NAME");
-// Creates connection
-$conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
-// Checks connection
-if ($conn->connect_error) {
- die("Connection failed: " . $conn->connect_error);
-}
-echo $_GET["username"];
-$sql="SELECT username FROM LOGIN";
-$sqls= "SELECT password FROM LOGIN";
-echo $sql;
-/*
-if($_GET["username"]!=$sql | $_GET["password"]!=$sqls)
-{
-  echo "ayhaga";
-//  header('login.html',true,301);
-  exit();
-}
-echo "succesful";
-  session_start();*/
-$conn->close();
+    
 ?>
     <form id="form" method="get" action="blog.php" >
       <fieldset>
