@@ -4,5 +4,5 @@
   <title> </title>
 </head>
 <?php
-echo $GET_["username"];
+echo $_GET["username"];
  ?>
