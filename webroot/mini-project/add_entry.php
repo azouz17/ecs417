@@ -20,28 +20,28 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
-$sql=SELECT username FROM LOGIN;
-$sqls= SELECET password FROM LOGIN;
-$u= mysql_query($sql,$conn);
-$p= mysql_query($sqls,$conn);
-if($_GET["username"]!=$u | $_GET["password"]!=$p)
+$sql=SELECT 'username' FROM LOGIN;
+$sqls= SELECET 'password' FROM LOGIN;
+
+if($_GET["username"]!=$sql | $_GET["password"]!=$sqls)
 {
   header(login.html,true,301);
   exit();
 }
+  session_start();
 $conn->close();
 ?>
-    <form id="form" method="get" action="http://webprojects.eecs.qmul.ac.uk/un300/week4/week4_process.php" >
+    <form id="form" method="get" action="blog.php" >
       <fieldset>
         <h1> Add Entry: </h1>
         <br>
         <label> Title:</label>
-        <input id="a1" type="text" title="title">
+        <input id="a1" type="text" name="title">
         <br>
 
         <label> Entry text:</label> <br>
 
-       <textarea id="a2" rows="10" cols="70"> </textarea>
+       <textarea id="a2" rows="10" cols="70" name="text"> </textarea>
        <br>
 
     <button id="submit" type="submit" onclick="check()">  Submit entry</button>
