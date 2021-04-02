@@ -25,9 +25,11 @@ $sqls= "SELECT password FROM LOGIN";
 
 if($_GET["username"]!=$sql | $_GET["password"]!=$sqls)
 {
+  echo "ayhaga";
   header('login.html',true,301);
   exit();
 }
+echo "succesful";
   session_start();
 $conn->close();
 ?>
