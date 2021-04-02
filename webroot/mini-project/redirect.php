@@ -6,8 +6,6 @@
 <?php
 $user =$_GET["username"];
 $pass =$_GET["password"];
-echo $user;
-echo"<br>". $pass;
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("DATABASE_USER");
@@ -24,17 +22,17 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     $row = $result->fetch_assoc();
-      echo "<br> username: ". $row["username"];
-      echo"<br> password: ". $row["password"] ;
 
 } else {
     echo "0 results";
 }
 if($row["username"]===$user and $row["password"]===$pass){
-  echo "TRUE";
+header("Location:add_entry.html");
+exit();
 }
 else{
-  echo "FALSE";
+  header("Location:login_blog.html",true,301);
+  exit();
 }
 
 $conn->close();
