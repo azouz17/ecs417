@@ -17,11 +17,18 @@ if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
 $sql="SELECT username FROM LOGIN";
-if($result = $conn->query($sql){
-  while($row=$result->fetch_assoc()){
-    $print= $row["col1"];
-  }
-  echo $print;
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<br> id: ". $row["username"];
+    }
+} else {
+    echo "0 results";
 }
+
+$conn->close();
+?>
+
 
  ?>
