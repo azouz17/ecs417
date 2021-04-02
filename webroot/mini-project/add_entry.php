@@ -25,7 +25,7 @@ $sqls= "SELECT password FROM LOGIN";
 
 if($_GET["username"]!=$sql | $_GET["password"]!=$sqls)
 {
-  header(login.html,true,301);
+  header('login.html',true,301);
   exit();
 }
   session_start();
