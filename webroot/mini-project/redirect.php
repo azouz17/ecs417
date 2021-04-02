@@ -17,5 +17,6 @@ if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
 $sql="SELECT username FROM LOGIN";
-echo $sql;
+$result = $conn->query($sql);
+echo $result;
  ?>
