@@ -4,7 +4,8 @@
   <title> </title>
 </head>
 <?php
-echo $_GET["username"];
+$user =$_GET["username"];
+echo $user;
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("DATABASE_USER");
@@ -25,6 +26,12 @@ if ($result->num_rows > 0) {
 
 } else {
     echo "0 results";
+}
+if($row["username"]===$user){
+  echo "TRUE";
+}
+else{
+  echo "FALSE";
 }
 
 $conn->close();
