@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 if($row["username"]===$user and $row["password"]===$pass){
+  session_start();
 header("Location:add_entry.html");
 exit();
 }
