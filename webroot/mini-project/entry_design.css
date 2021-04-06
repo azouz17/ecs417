@@ -1,7 +1,8 @@
 /* Specify the bacjground color of the html and font type */
 html{
-  background-color: #DCD6D1;
-  font-family: serif;
+  background-color: #E3DFFF;
+  font-family: sans-serif;
+  color: #F9F5C8;
 }
 /* this is for the add entry button. I change the font inside the button and its position, bg color and text color.*/
 button{
@@ -9,23 +10,24 @@ button{
   font-weight: bold;
   float: right;
   background-color: black;
-  color:#85E0EA;
+  color: inherit;
   margin:0.3em;
+
 }
 /* for the header of the page */
 h1{
   border: double 1px white;
-  width:25%;
+  width:72.5%;
   font-weight: bold;
-  background-color: #B47555;
+  background-color: #3C787E;
   margin: 0.5em;
-  font-size: 1.3em;
+  font-size: 1.7em;
 }
 /* this is for the test entry inside the div container*/
 div{
 
 border-spacing: 1em;
-  background-color: #64B96A;
+  background-color: #262730;
   border:double 3px #A25653;
   width:70%;
   padding: 1em;
@@ -37,8 +39,8 @@ border-spacing: 1em;
 }
 /* for the date of the blog*/
 h6{
-  float: right;
-  opacity: 0.4;
+  float:right;
+  opacity: 0.7;
   color:white;
 
 }
