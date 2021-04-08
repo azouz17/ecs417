@@ -62,7 +62,7 @@ $_SESSION['last_action'] = time();
     $sql= "INSERT INTO blog (text,title,date)
     VALUES('$text','$title','$date')";
     if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo "Blog entry Added";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
