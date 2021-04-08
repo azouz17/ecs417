@@ -52,9 +52,10 @@ $date=date('Y/m/d H:i:s',time());
     $sql= "INSERT INTO blog (text,title,date)
 VALUES('$text','$title','$date')";
 if ($conn->query($sql) === TRUE) {
-echo "Blog entry Added";}
+echo "Blog entry Added";
+}
 
-} else {
+ else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
 header("Location:blog.php");
