@@ -11,7 +11,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
-$blogNum= $_GET['blogNum'];
+$blogNum= $_GET["blogNum"];
 $sql = "SELECT text,title,date FROM blog
 WHERE blogNum=$blogNum";
 
