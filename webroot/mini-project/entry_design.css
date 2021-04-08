@@ -44,3 +44,8 @@ h5{
   color:white;
 
 }
+td{
+  border-bottom: solid 1px black;
+  background-color: white
+  color: black;
+}

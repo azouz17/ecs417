@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $blogNum= $_GET['blogNum'];
 $sql = "SELECT text,title,date FROM blog
 WHERE blogNum=$blogNum";
-$tqwer=1;
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -29,6 +29,24 @@ if ($result->num_rows > 0) {
 } else {
   echo "Post Not Found";
 }
+$comments=array();
+$counter=0;
+$sql1="SELECT text FROM comments WHERE blogNum=$blogNum";
+$result1= $conn->query($sql1);
+if ($result1->num_rows > 0) {
+  // output data of each row
+  while($row = $result1->fetch_assoc()) {
+
+    $comments[$counter]=$row["title"];
+
+    $counter++;
+  }
+} else {
+  echo "0 results";
+}
+
+$conn->close();
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -44,5 +62,21 @@ if ($result->num_rows > 0) {
     <p><?php echo $text; ?></p>
     <h5><?php echo $date; ?></h5>
     </div>
+    <table>
+      <?php
+      $i=0;
+      while( $i<$counter) :
+        ?>
+      <tr>
+        <td><?php echo $comments[i];</td>
+      </tr>
+    </table>
+    <form method="GET" action="add_comment.php?blogNum=<?php $blogNum?>">
+      <fielset>
+        <label></label>
+        <input type="text" name="comment">
+        <button type="submit">Add comment </a></button>
+      </fielset>
+    </form>
   </body>
   </html>
