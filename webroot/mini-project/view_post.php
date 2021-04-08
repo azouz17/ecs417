@@ -68,7 +68,7 @@ $conn->close();
       while( $i<$counter) :
         ?>
       <tr>
-        <td><?php echo $comments[i];</td>
+        <td><?php echo $comments[$i];?></td>
       </tr>
     </table>
     <form method="GET" action="add_comment.php?blogNum=<?php $blogNum?>">
