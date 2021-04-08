@@ -55,16 +55,83 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
-     ?>
-    <h1> Blog Entries: </h1>
-    <div>
-      <h3> Test entry:</h3>
-      <h6> March-6-2021</h6>
-      <p> This is a test entry for the first entry of the blog. i am writing anything just to fill the space and
-        hopefully the p container will indent to a new line very soon right about now</p>
-        </div>
-        <?php
+$temp=0;
+$increment=0;
+$return_counter;
 
-      ?>
+for($counter=0;$counter<count($blog[2]);$counter++)
+{
+
+  if($counter===0)
+  {
+
+  }
+
+  else{
+
+    $return_counter=$counter;
+    $increment=$counter-1;
+
+    for($x=$increment;$x>=0;$x--)
+    {
+
+$date1=$blog[2][$counter];
+
+$date2=$blog[2][$x];
+
+
+      if($date1>$date2)
+      {
+
+        $temp=$blog[2][$counter];
+        $blog[2][$counter]=$blog[2][$x];
+        $blog[2][$x]=$temp;
+        $temp=$blog[0][$counter];
+        $blog[0][$counter]=$blog[0][$x];
+        $blog[0][$x]=$temp;
+        $temp=$blog[1][$counter];
+        $blog[1][$counter]=$blog[1][$x];
+        $blog[1][$x]=$temp;
+        $temp=$blog[3][$counter];
+        $blog[3][$counter]=$blog[3][$x];
+        $blog[3][$x]=$temp;
+
+
+        $counter--;
+
+      }
+      else{
+        ;
+      }
+      }
+
+      $counter=$return_counter;
+  }
+}
+
+
+?>
+
+<h1> Blog Entries</h1>
+<p style="color:"black" font-weight: bold"> -Click on blog title to view full post and comments</p>
+<?php
+$counter=0;
+while( $counter<count($blog[0])) :
+  ?>
+<a href="viewBlogPost.php?blogNum=<?php echo $blog[3][$counter];?>">
+    <div>
+      <h3> <?php echo $blog[0][$counter];?></h3>
+      <h6> <?php echo $blog[2][$counter];?></h6>
+
+        </div>
+      </a>
+        <?php
+        $counter++;
+         endwhile ?>
+
+
+        </body>
+        </html>
+
         </body>
         </html>
