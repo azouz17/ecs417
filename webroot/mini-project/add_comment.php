@@ -11,6 +11,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
+$blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
 $sql="INSERT INTO comments (comment)
 VALUES('$comment')";
@@ -21,5 +22,5 @@ echo "Blog entry Added";
  else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
-header("Location:view_post.php");
+header("Location:view_post.php?blogNum=$blogNum");
 ?>
