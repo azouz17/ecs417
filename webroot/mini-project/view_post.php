@@ -70,6 +70,8 @@ $conn->close();
       <tr>
         <td><?php echo $comments[$i];?></td>
       </tr>
+      <?php $i++;
+       endwhile?>
     </table>
     <form method="GET" action="add_comment.php?blogNum=<?php $blogNum?>">
       <fielset>
