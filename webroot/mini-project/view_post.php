@@ -32,6 +32,7 @@ if ($result->num_rows > 0) {
 $comments=array();
 $counter=0;
 $sql1="SELECT text FROM comments WHERE blogNum=$blogNum";
+echo $sql1;
 $result1= $conn->query($sql1);
 if ($result1->num_rows > 0) {
   // output data of each row
@@ -77,7 +78,7 @@ $conn->close();
       <fielset>
         <label></label>
         <input type="text" name="comment">
-        <input type="hidden" name="blogNum" value="<?php $blogNum?>">
+        <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
         <button type="submit">Add comment </a></button>
       </fielset>
     </form>
