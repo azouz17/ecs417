@@ -1,5 +1,5 @@
 <?php
-if(session_status()!=="PHP_SESSION_ACTIVE")
+if(isset($_SESSION['state']))
 {
   header("Location:login_blog.html");
   exit();

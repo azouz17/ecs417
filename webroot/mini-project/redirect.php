@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
 }
 if($row["username"]===$user and $row["password"]===$pass){
   session_start();
-  
+  $_SESSION['state']="yes";
 header("Location:add_entry.html");
 exit();
 }
