@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 $blogNum= $_GET['blogNum'];
 $sql = "SELECT text,title,date FROM blog
-WHERE blogNum=$blogNum;"
+WHERE blogNum=$blogNum";
 $tqwer=1;
 $result = $conn->query($sql);
 
