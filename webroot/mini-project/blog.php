@@ -78,6 +78,7 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
+ $conn->close();
 $temp=0;
 $increment=0;
 $return_counter;
@@ -151,7 +152,7 @@ while( $counter<count($blog[0])) :
         <?php
         $counter++;
          endwhile
-         $conn->close();?>
+        ?>
 
 
         </body>
