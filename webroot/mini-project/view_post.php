@@ -73,10 +73,11 @@ $conn->close();
       <?php $i++;
        endwhile?>
     </table>
-    <form method="GET" action="add_comment.php?blogNum=<?php $blogNum?>">
+    <form method="GET" action="add_comment.php">
       <fielset>
         <label></label>
         <input type="text" name="comment">
+        <input type="hidden" name="blogNum" value="<?php $blogNum?>">
         <button type="submit">Add comment </a></button>
       </fielset>
     </form>
