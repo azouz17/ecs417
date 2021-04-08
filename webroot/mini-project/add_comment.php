@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 }
 $blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
-$sql="INSERT INTO comments (text)
-VALUES('$comment')";
+$sql="INSERT INTO comments (text,blogNum)
+VALUES('$comment',''$blogNum')";
 if ($conn->query($sql) === TRUE) {
 echo "Blog entry Added";
 header("Location:view_post.php?blogNum=$blogNum");
