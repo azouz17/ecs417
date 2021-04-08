@@ -46,8 +46,9 @@ h5{
 }
 td{
   margin-left: 2em;
+  background-color: white;
   border-bottom: solid 1px black;
-
+  width:40%;
   color: black;
   font-size: 2em;
 }
