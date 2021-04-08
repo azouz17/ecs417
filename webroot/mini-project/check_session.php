@@ -2,7 +2,7 @@
 <?php
 //Expire the session if user is inactive for 30
 //minutes or more.
-$expireAfter = 1;
+$expireAfter = 5;
 
 //Check to see if our "last action" session
 //variable has been set.
@@ -34,10 +34,10 @@ $_SESSION['last_action'] = time();
  ?><?php
 if(isset($_SESSION['state']))
 {
-  header("Location:login_blog.html");
+  header("Location:add_entry.html");
   exit();
 
 }
 else{
-  header("Location:add_entry.html");
+  header("Location:login_blog.html");
 }?>
