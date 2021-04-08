@@ -43,7 +43,7 @@ function check()
   event.preventDefault();
   }
   else{
-    title.setAttribute('style',"border: solid 0.5px black");
+    text.setAttribute('style',"border: solid 0.5px black");
 
   }
 }

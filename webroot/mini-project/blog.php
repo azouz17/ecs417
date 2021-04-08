@@ -9,7 +9,7 @@
 
   </head>
   <body>
-    <button> <a href="login_blog.html"> Add Entry </a></button>
+    <button> <a href="check_session.php"> Add Entry </a></button>
     <button> <a href="portfolio.html">Portfolio</a></button>
     <?php
     $title= $_GET["title"];
