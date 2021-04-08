@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   $row = $result->fetch_assoc();
 
-    $tile=$row["title"];
+    $title=$row["title"];
     $text=$row["text"];
     $date=$row["date"];
 
@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
   <div>
     <h3><?php echo $title; ?></h3>
     <p><?php echo $text; ?></p>
-    <h6><?php echo $date; ?></p>
+    <h5><?php echo $date; ?></h5>
     </div>
   </body>
   </html>
