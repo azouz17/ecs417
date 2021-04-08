@@ -17,10 +17,11 @@ $sql="INSERT INTO comments (comment)
 VALUES('$comment')";
 if ($conn->query($sql) === TRUE) {
 echo "Blog entry Added";
+header("Location:view_post.php?blogNum=$blogNum");
 }
 
  else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
-header("Location:view_post.php?blogNum=$blogNum");
+
 ?>
