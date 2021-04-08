@@ -142,10 +142,10 @@ $date2=$blog[2][$x];
 $counter=0;
 while( $counter<count($blog[0])) :
   ?>
-<a href="viewBlogPost.php?blogNum=<?php echo $blog[3][$counter];?>">
+<a href="view_post.php?blogNum=<?php echo $blog[3][$counter];?>">
     <div>
       <h3> <?php echo $blog[0][$counter];?></h3>
-      <h6> <?php echo $blog[2][$counter];?></h6>
+      <h5> <?php echo $blog[2][$counter];?></h5>
 
         </div>
       </a>

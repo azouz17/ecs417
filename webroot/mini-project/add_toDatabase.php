@@ -57,4 +57,5 @@ echo "Blog entry Added";}
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
+header("Location:blog.php");
 ?>
