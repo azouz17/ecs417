@@ -77,7 +77,7 @@ $conn->close();
     <form method="GET" action="add_comment.php">
       <fielset>
         <label>Comment:</label> <br>
-        <textarea type="text" name="comment" rows="5" cols="15"></textarea>
+        <textarea type="text" name="comment" rows="3" cols="20"></textarea>
         <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
         <br>
         <button type="submit">Add comment </a></button>

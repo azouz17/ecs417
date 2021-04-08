@@ -45,10 +45,10 @@ h5{
 
 }
 textarea,label{
-  margin-left: 2em;
+  margin: 2em;
 }
 td{
-  margin-left: 2em;
+  margin: 2em;
   background-color: white;
   border-bottom: solid 1px black;
   width:40%;
