@@ -32,7 +32,7 @@ $blog=array(
   array(),array(),array(),array()
 );
 $counter=0;
-$sql = "SELECT text,title,date FROM blog";
+$sql = "SELECT text,title,date,blogNum FROM blog";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
