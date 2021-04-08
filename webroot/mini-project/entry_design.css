@@ -46,6 +46,8 @@ h5{
 }
 textarea,label{
   margin: 2em;
+  font-size: 2em;
+  color: black;
 }
 td{
   margin: 2em;
