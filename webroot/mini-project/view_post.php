@@ -63,6 +63,15 @@ $conn->close();
     <p><?php echo $text; ?></p>
     <h5><?php echo $date; ?></h5>
     </div>
+    <form method="GET" action="add_comment.php">
+      <fielset>
+        <label>Comment:</label> <br>
+        <textarea type="text" name="comment"></textarea>
+        <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
+        <br>
+        <button type="submit">Add comment </a></button>
+      </fielset>
+    </form>
     <table>
       <?php
       $i=0;
@@ -74,13 +83,6 @@ $conn->close();
       <?php $i++;
        endwhile?>
     </table>
-    <form method="GET" action="add_comment.php">
-      <fielset>
-        <label>Comment:</label>
-        <input type="text" name="comment">
-        <textarea type="hidden" name="blogNum" value="<?php echo $blogNum?>">
-        <button type="submit">Add comment </a></button>
-      </fielset>
-    </form>
+
   </body>
   </html>
