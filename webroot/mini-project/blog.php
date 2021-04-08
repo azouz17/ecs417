@@ -113,7 +113,7 @@ $date2=$blog[2][$x];
 ?>
 
 <h1> Blog Entries</h1>
-<p style="color:"black" font-weight: bold"> -Click on blog title to view full post and comments</p>
+<p style="color:black; font-weight: bold"> -Click on blog title to view full post and comments</p>
 <?php
 $counter=0;
 while( $counter<count($blog[0])) :
