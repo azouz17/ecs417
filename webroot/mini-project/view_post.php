@@ -14,6 +14,7 @@ if ($conn->connect_error) {
 $blogNum= $_GET['blogNum'];
 $sql = "SELECT text,title,date FROM blog
 WHERE blogNum=$blogNum;"
+$tqwer=1;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -24,9 +25,9 @@ if ($result->num_rows > 0) {
     $text=$row["text"];
     $date=$row["date"];
 
-    $counter++;
+
 } else {
-  echo "0 results";
+  echo "Post Not Found";
 }
 ?>
 <!DOCTYPE HTML>
