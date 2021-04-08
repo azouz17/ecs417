@@ -38,7 +38,7 @@ if ($result1->num_rows > 0) {
   // output data of each row
   while($row = $result1->fetch_assoc()) {
 
-    $comments[$counter]=$row["title"];
+    $comments[$counter]=$row["text"];
 
     $counter++;
   }
