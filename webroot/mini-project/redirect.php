@@ -6,7 +6,7 @@
 <?php
 //Expire the session if user is inactive for 30
 //minutes or more.
-$expireAfter = 30;
+$expireAfter = 1;
 
 //Check to see if our "last action" session
 //variable has been set.
