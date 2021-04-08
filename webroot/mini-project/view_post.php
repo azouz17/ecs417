@@ -54,7 +54,7 @@ $conn->close();
 <head>
   <title> Blog post</title>
   <link rel="stylesheet" href="reset.css" type="text/css">
-<link rel="stylesheet" href="entry_design.css" type="text/css">
+<link rel="stylesheet" href="poststyle.css" type="text/css">
 </head>
 <body>
   <h1> Blog Post</h1>
