@@ -105,7 +105,7 @@ $date2=$blog[2][$x];
 
 
 ?>
-
+<?php echo session_status(); ?>
 <h1> Blog Entries</h1>
 <p style="color:black; font-weight: bold"> -Click on blog title to view full post and comments</p>
 <?php
