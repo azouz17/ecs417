@@ -42,10 +42,7 @@ if ($result1->num_rows > 0) {
 
     $counter++;
   }
-} else {
-  echo "0 results";
-}
-
+} 
 $conn->close();
 
 ?>
