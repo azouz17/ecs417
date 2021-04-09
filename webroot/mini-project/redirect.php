@@ -63,15 +63,12 @@ if($row["username"]===$user and $row["password"]===$pass){
   session_start();
   $_SESSION['state']="yes";
   $_SESSION['last_action']=time();
-  echo "Inside if statment";
-echo  session_status();
-
-//header("Location:add_entry.html");
+  header("Location:add_entry.html");
 exit();
 }
 else{
-  echo "Inside else stament";
-  //header("Location:login_blog.html",true,301);
+  
+  header("Location:login_blog.html",true,301);
   exit();
 }
 
