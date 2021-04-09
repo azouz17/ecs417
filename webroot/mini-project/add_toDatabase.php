@@ -1,6 +1,7 @@
 
 <?php
-/*
+
+
 //Expire the session if user is inactive for 30
 //minutes or more.
 $expireAfter = 5;
@@ -61,7 +62,6 @@ echo "Blog entry Added";
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
 header("Location:blog.php");
-*/
-echo $_SESSION['state'];
-echo session_status();
+
+
 ?>

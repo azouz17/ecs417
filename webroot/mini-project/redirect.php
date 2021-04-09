@@ -37,6 +37,7 @@ $_SESSION['last_action'] = time();
 
  ?>
 <?php
+session_start();
 $user =$_GET["username"];
 $pass =$_GET["password"];
 $dbhost = getenv("MYSQL_SERVICE_HOST");
@@ -60,14 +61,13 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 if($row["username"]===$user and $row["password"]===$pass){
-  session_start();
   $_SESSION['state']="yes";
   $_SESSION['last_action']=time();
   header("Location:add_entry.html");
 exit();
 }
 else{
-  
+
   header("Location:login_blog.html",true,301);
   exit();
 }
