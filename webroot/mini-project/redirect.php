@@ -4,6 +4,7 @@
   <title> </title>
 </head>
 <?php
+session_start();
 //Expire the session if user is inactive for 30
 //minutes or more.
 $expireAfter = 5;
@@ -37,7 +38,7 @@ $_SESSION['last_action'] = time();
 
  ?>
 <?php
-session_start();
+
 $user =$_GET["username"];
 $pass =$_GET["password"];
 $dbhost = getenv("MYSQL_SERVICE_HOST");
