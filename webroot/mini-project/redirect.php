@@ -5,11 +5,10 @@
 </head>
 <?php
 session_start();
-echo $_SESSION['last_action'];
-echo time();
+
 //Expire the session if user is inactive for 30
 //minutes or more.
-$expireAfter = 5;
+$expireAfter = 1;
 
 //Check to see if our "last action" session
 //variable has been set.
@@ -54,11 +53,19 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT username,password FROM login";
+$sql="SELECT username,password,userId FROM login";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    $row = $result->fetch_assoc();
+    while($row = $result->fetch_assoc())
+    {
+      if($row["username"]===$user and $row["password"]===$pass){
+        $_SESSION['state']="yes";
+        $_SESSION['last_action']=time();
+        header("Location:add_entry.html?userId=$row["userId"]");
+      exit();
+      }
+    }
 
 } else {
     echo "0 results";
@@ -66,7 +73,7 @@ if ($result->num_rows > 0) {
 if($row["username"]===$user and $row["password"]===$pass){
   $_SESSION['state']="yes";
   $_SESSION['last_action']=time();
-  //header("Location:add_entry.html");
+  header("Location:add_entry.html");
 exit();
 }
 else{
