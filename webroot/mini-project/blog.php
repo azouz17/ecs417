@@ -105,7 +105,7 @@ $date2=$blog[2][$x];
 
 
 ?>
-<?php echo session_status(); ?>
+
 <h1> Blog Entries</h1>
 <p style="color:black; font-weight: bold"> -Click on blog title to view full post and comments</p>
 <?php
@@ -119,7 +119,7 @@ while( $counter<count($blog[0])) :
 
         </div>
       </a>
-      <a href="check_delete.php?blogNum=<?php echo $blog[3][$counter]; ?>"
+      <a href="check_delete.php?blogNum=<?php echo $blog[3][$counter]; ?>"> Delete </a>
         <?php
         $counter++;
          endwhile
