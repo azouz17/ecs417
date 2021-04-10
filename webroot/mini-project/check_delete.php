@@ -36,7 +36,7 @@ $blogNum=$_GET['blogNum'];
 echo $blogNum;
 echo $commentId;
 
-if(isset($_SESSION['loggedin'])&& isset($_SESSION['admin']))
+if(isset($_SESSION['loggedin']) and isset($_SESSION['admin']))
 {
 
   header("Location:delete_comment.php?commentId=$commentId&blogNum=$blogNum");
