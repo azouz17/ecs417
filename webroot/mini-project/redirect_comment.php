@@ -33,12 +33,12 @@ $comment=$_GET['comment'];
 if($row["username"]===$user and $row["password"]===$pass){
 
 
-  header("Location:add_comment.php?blogNum=$blogNum?comment=$comment");
+  header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
 exit();
 }
 else{
 
-  header("Location:login_blog.php?blogNum=$blogNum?comment=$comment",true,301);
+  header("Location:login_blog.php?blogNum=$blogNum&comment=$comment",true,301);
   exit();
 }
 

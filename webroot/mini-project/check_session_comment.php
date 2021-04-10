@@ -35,11 +35,11 @@ $comment=$_GET['comment'];
 if(isset($_SESSION['state']))
 {
 
-  header("Location:add_comment.php?blogNum=$blogNum?comment=$comment");
+  header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
   exit();
 
 }
 else{
-  header("Location:login_blog.php?blogNum=$blogNum?comment=$comment");
+  header("Location:login_blog.php?blogNum=$blogNum&comment=$comment");
   exit();
 }?>

@@ -21,7 +21,7 @@
           </tr>
           <tr>
           <td>  <label> Password:</label></td>
-          <td>  <input required type="text" name="password"></td>
+          <td>  <input required type="password" name="password"></td>
           </tr>
           </table>
           <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
