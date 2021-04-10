@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 $blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
-$sql="INSERT INTO comments (text,blogNum)
+$sql="INSERT INTO commnets (text,blogNum)
 VALUES('$comment',$blogNum)";
 if ($conn->query($sql) === TRUE) {
 echo "Blog entry Added";
