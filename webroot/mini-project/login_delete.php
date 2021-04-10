@@ -12,7 +12,7 @@
       $comment=$_GET['comment'];
       $commentId=$_GET['commentId'];
       ?>
-        <form method="GET" action="redirect_comment.php">
+        <form method="GET" action="redirect_delete.php">
           <fieldset>
             <h2> Log In:</h2>
             <table>
