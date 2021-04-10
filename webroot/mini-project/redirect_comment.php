@@ -28,16 +28,17 @@ if ($result->num_rows > 0) {
     else {
     echo "0 results";
 }
+$blogNum=$_GET['blogNum'];
+$comment=$_GET['comment'];
 if($row["username"]===$user and $row["password"]===$pass){
-  $_SESSION['state']="yes";
-  $_SESSION['time']=time();
 
-  header("Location:add_comment.php");
+
+  header("Location:add_comment.php?blogNum=$blogNum?comment=$comment");
 exit();
 }
 else{
 
-  header("Location:login_blog.html",true,301);
+  header("Location:login_blog.php?blogNum=$blogNum?comment=$comment",true,301);
   exit();
 }
 
