@@ -33,6 +33,9 @@ if(isset($_SESSION['time'])){
 session_start();
 $commentId=$_GET['commentId'];
 $blogNum=$_GET['blogNum'];
+echo $blogNum;
+echo $commentId;
+/*
 if(isset($_SESSION['delete']))
 {
 
@@ -44,4 +47,5 @@ if(isset($_SESSION['delete']))
 else{
   header("Location:login_delete.php?blogNum=$blogNum&comment=$comment");
   exit();
-}?>
+}
+*/?>
