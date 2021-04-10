@@ -26,37 +26,12 @@ $sql="SELECT username,password,admin FROM login";
 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-  $counter=0;
     // output data of each row
     $row = $result->fetch_assoc();
-
-      if($row['username']===$user and $row['password']===$pass and $row['admin']===1){
-
-      session_start();
-      $_SESSION['loggedin']="yes";
-      $_SESSION['admin']="yes";
-        header("Location:delete_comment.php?blogNum=$blogNum&commentId=$commentId");
-      exit();
-      }
-      else if($row['username']===$user and $row['password']===$pass and $row['admin']===1)
-      {
-        $message="cant delete not admin";
-        header("Location:login_delete.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
-        exit();
-      }
-      else{
-        $message="incorrect login information";
-        header("Location:login_delete.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
-        exit();
-      }
-
-
-
     }
     else {
     echo "0 results";
 }
-
 
 if($row["username"]===$user and $row["password"]===$pass){
 
@@ -68,7 +43,7 @@ exit();
 }
 else{
 
-  header("Location:login_blog.php?blogNum=$blogNum&commentId=$commentId",true,301);
+  header("Location:login_delete.php?blogNum=$blogNum&commentId=$commentId",true,301);
   exit();
 }
 
