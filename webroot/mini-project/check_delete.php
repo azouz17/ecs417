@@ -36,7 +36,7 @@ $blogNum=$_GET['blogNum'];
 echo $blogNum;
 echo $commentId;
 
-if(isset($_SESSION['loggedin']))
+if(isset($_SESSION['loggedin'])&& isset($_SESSION['admin']))
 {
 
   header("Location:delete_comment.php?commentId=$commentId&blogNum=$blogNum");
@@ -44,8 +44,12 @@ if(isset($_SESSION['loggedin']))
 
 }
 
-else{
-  header("Location:login_delete.php?blogNum=$blogNum&commentId=$commentId");
+else if(isset($_SESSION['loggedin'])){
+  $message="cannot delete not admin";
+  header("Location:login_delete.php?message=$message");
   exit();
+}
+else{
+  header("Location:login_delete.php?commentId=$commentId&blogNum=$blogNum");
 }
 ?>

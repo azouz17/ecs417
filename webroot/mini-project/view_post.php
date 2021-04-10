@@ -53,6 +53,9 @@ $conn->close();
 <html>
 <head>
   <title> Blog post</title>
+  <?php $message=$_GET['message'];
+  echo $message;
+  ?>
   <link rel="stylesheet" href="reset.css" type="text/css">
 <link rel="stylesheet" href="poststyle.css" type="text/css">
 </head>
