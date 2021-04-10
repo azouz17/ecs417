@@ -36,7 +36,7 @@ $blogNum=$_GET['blogNum'];
 if(isset($_SESSION['delete']))
 {
 
-  header("Location:delete_comment.php?commentId=$commentId");
+  header("Location:delete_comment.php?commentId=$commentId&blogNum=$blogNum");
   exit();
 
 }
