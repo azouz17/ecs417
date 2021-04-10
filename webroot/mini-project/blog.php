@@ -119,6 +119,7 @@ while( $counter<count($blog[0])) :
 
         </div>
       </a>
+      <a href="check_delete.php?blogNum=<?php echo $blog[3][$counter]; ?>"
         <?php
         $counter++;
          endwhile
