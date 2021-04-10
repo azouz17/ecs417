@@ -20,8 +20,7 @@ if(isset($_SESSION['time'])){
   if($secondsInactive >= $expireAfterSeconds){
       //User has been inactive for too long.
       //Kill their session.
-      session_unset();
-      session_destroy();
+      
       header("Location:portfolio.html");
     exit();
   }
