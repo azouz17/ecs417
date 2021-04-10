@@ -32,11 +32,11 @@ if(isset($_SESSION['time'])){
 session_start();
 if(isset($_SESSION['state']))
 {
-  header("Location:add_entry.html");
+  header("Location:add_comment.php");
   exit();
 
 }
 else{
-  header("Location:login_blog.html");
+  header("Location:redirect_comment.php");
   exit();
 }?>

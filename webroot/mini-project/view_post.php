@@ -42,7 +42,7 @@ if ($result1->num_rows > 0) {
 
     $counter++;
   }
-} 
+}
 $conn->close();
 
 ?>
@@ -71,7 +71,7 @@ $conn->close();
       <?php $i++;
        endwhile?>
     </table>
-    <form method="GET" action="add_comment.php">
+    <form method="GET" action="check_session_comment.php">
       <fielset>
         <label>Comment:</label> <br>
         <textarea type="text" name="comment" rows="3" cols="20"></textarea>
