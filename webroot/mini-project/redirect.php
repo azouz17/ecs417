@@ -57,9 +57,9 @@ $sql="SELECT username,password,userId FROM login";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    $row = $result->fetch_assoc()
-    
-} else {
+    $row = $result->fetch_assoc();
+    }
+    else {
     echo "0 results";
 }
 if($row["username"]===$user and $row["password"]===$pass){
