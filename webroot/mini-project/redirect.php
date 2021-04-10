@@ -6,6 +6,7 @@
 <?php
 session_start();
 echo $_SESSION['last_action'];
+echo time();
 //Expire the session if user is inactive for 30
 //minutes or more.
 $expireAfter = 5;
