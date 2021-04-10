@@ -29,7 +29,7 @@ if(isset($_SESSION['last_action'])){
 
 //Assign the current timestamp as the user's
 //latest activity
-$_SESSION['last_action'] = time();
+
 ?>
 
 <?php
