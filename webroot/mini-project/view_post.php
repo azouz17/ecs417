@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
 }
 $comments=array();
 $counter=0;
-$sql1="SELECT text FROM comments WHERE blogNum=$blogNum";
+$sql1="SELECT text FROM commnets WHERE blogNum=$blogNum";
 
 $result1= $conn->query($sql1);
 if ($result1->num_rows > 0) {
