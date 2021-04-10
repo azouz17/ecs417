@@ -28,13 +28,14 @@ if ($result->num_rows > 0) {
     else {
     echo "0 results";
 }
+
 $blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
 $commentId=$_GET['commentId'];
 if($row["username"]===$user and $row["password"]===$pass){
 
 session_start();
-$_SESSION['delete']="yes";
+$_SESSION['loggedin']="yes";
   header("Location:delete_comment.php?blogNum=$blogNum&commentId=$commentId");
 exit();
 }

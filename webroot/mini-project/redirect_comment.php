@@ -33,7 +33,7 @@ $comment=$_GET['comment'];
 if($row["username"]===$user and $row["password"]===$pass){
 
 session_start();
-$_SESSION['comment']="yes";
+$_SESSION['loggedin']="yes";
   header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
 exit();
 }
