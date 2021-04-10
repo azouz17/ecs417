@@ -23,55 +23,27 @@ $blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
 $commentId=$_GET['commentId'];
 $sql="SELECT username,password,admin FROM login";
-$login=array(
-  array(),array(),array()
-);
+
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-  $counter=0;
     // output data of each row
-    while($row = $result->fetch_assoc()){
-      $login[0][$counter]=$row["username"];
-      $login[1][$counter]=$row["password"];
-      $login[2][$counter]=$row["admin"];
-      if($login[0][$counter]===$user and $login[1][$counter]===$pass and $login[2][$counter]===1){
-
-      session_start();
-      $_SESSION['loggedin']="yes";
-      $_SESSION['admin']="yes";
-        header("Location:delete_post.php?blogNum=$blogNum&commentId=$commentId");
-      exit();
-      }
-      else if($login[0][$counter]===$user and $login[1][$counter]===$pass and $login[2][$counter]===0)
-      {
-        $message="cant delete not admin";
-        header("Location:login_post.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
-        exit();
-      }
-      else{
-        $message="incorrect login information";
-        header("Location:login_post.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
-        exit();
-      }
-      $counter++;
-    }
+    $row = $result->fetch_assoc();
     }
     else {
     echo "0 results";
 }
-
 
 if($row["username"]===$user and $row["password"]===$pass){
 
 session_start();
 $_SESSION['loggedin']="yes";
 $_SESSION['admin']="yes";
-  header("Location:delete_comment.php?blogNum=$blogNum&commentId=$commentId");
+  header("Location:delete_post.php?blogNum=$blogNum&commentId=$commentId");
 exit();
 }
 else{
 
-  header("Location:login_blog.php?blogNum=$blogNum&commentId=$commentId",true,301);
+  header("Location:login_post.php?blogNum=$blogNum&commentId=$commentId",true,301);
   exit();
 }
 

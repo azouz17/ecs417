@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -39,13 +38,13 @@ echo $commentId;
 if(isset($_SESSION['loggedin']) and isset($_SESSION['admin']))
 {
 
-  header("Location:delete_comment.php?commentId=$commentId&blogNum=$blogNum");
+  header("Location:delete_post.php?commentId=$commentId&blogNum=$blogNum");
   exit();
 
 }
 
 
 else{
-  header("Location:login_delete.php?commentId=$commentId&blogNum=$blogNum");
+  header("Location:login_post.php?commentId=$commentId&blogNum=$blogNum");
 }
 ?>
