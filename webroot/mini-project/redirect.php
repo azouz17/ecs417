@@ -30,6 +30,7 @@ if ($result->num_rows > 0) {
 }
 if($row["username"]===$user and $row["password"]===$pass){
   $_SESSION['state']="yes";
+  $_SESSION['loggedin']="yes";
   $_SESSION['time']=time();
 
   header("Location:add_entry.html");

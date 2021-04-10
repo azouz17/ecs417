@@ -42,7 +42,7 @@ if ($result1->num_rows > 0) {
 
     $comments[0][$counter]=$row["text"];
     $comments[1][$counter]=$row["commentId"];
-
+    echo $comments[1][$counter] ;
     $counter++;
   }
 }

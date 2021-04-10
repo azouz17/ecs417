@@ -32,7 +32,7 @@ if(isset($_SESSION['time'])){
 session_start();
 $blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
-if(isset($_SESSION['comment']))
+if(isset($_SESSION['loggedin']))
 {
 
   header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
