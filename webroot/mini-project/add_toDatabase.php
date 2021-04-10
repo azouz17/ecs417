@@ -1,6 +1,6 @@
 
 <?php
-
+session_start();
 
 //Expire the session if user is inactive for 30
 //minutes or more.

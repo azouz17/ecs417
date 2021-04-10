@@ -37,8 +37,8 @@ $_SESSION['last_action'] = time();
 
 
  ?>
-<?php
-
+ <?php
+session_start();
 $user =$_GET["username"];
 $pass =$_GET["password"];
 $dbhost = getenv("MYSQL_SERVICE_HOST");
