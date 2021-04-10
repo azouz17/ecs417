@@ -41,7 +41,7 @@ if ($result1->num_rows > 0) {
   while($row = $result1->fetch_assoc()) {
 
     $comments[0][$counter]=$row["text"];
-    $comments[1][$counter]=$row["commentId"]
+    $comments[1][$counter]=$row["commentId"];
 
     $counter++;
   }
