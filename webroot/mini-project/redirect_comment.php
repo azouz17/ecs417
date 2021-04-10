@@ -32,7 +32,8 @@ $blogNum=$_GET['blogNum'];
 $comment=$_GET['comment'];
 if($row["username"]===$user and $row["password"]===$pass){
 
-
+session_start();
+$_SESSION['comment']="yes";
   header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
 exit();
 }

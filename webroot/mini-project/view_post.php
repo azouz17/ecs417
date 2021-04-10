@@ -29,16 +29,17 @@ if ($result->num_rows > 0) {
 } else {
   echo "Post Not Found";
 }
-$comments=array();
+$comments=array(),array();
 $counter=0;
-$sql1="SELECT text FROM commnets WHERE blogNum=$blogNum";
+$sql1="SELECT text,commentId FROM commnets WHERE blogNum=$blogNum";
 
 $result1= $conn->query($sql1);
 if ($result1->num_rows > 0) {
   // output data of each row
   while($row = $result1->fetch_assoc()) {
 
-    $comments[$counter]=$row["text"];
+    $comments[0][$counter]=$row["text"];
+    $comments[1][$counter]=$row["commentId"]
 
     $counter++;
   }
@@ -66,7 +67,9 @@ $conn->close();
       while( $i<$counter) :
         ?>
       <tr>
-        <td><?php echo $comments[$i];?></td>
+        <td><?php echo $comments[0][$i];?></td>
+        <td><a href="check_session_comment.php?<?php echo $comment[1][$i];?>"> Delete</a></td>
+
       </tr>
       <?php $i++;
        endwhile?>
