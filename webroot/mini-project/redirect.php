@@ -57,16 +57,8 @@ $sql="SELECT username,password,userId FROM login";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc())
-    {
-      if($row["username"]===$user and $row["password"]===$pass){
-        $_SESSION['state']="yes";
-        $_SESSION['last_action']=time();
-        header("Location:add_entry.html?userId=$row["userId"]");
-      exit();
-      }
-    }
-
+    $row = $result->fetch_assoc()
+    
 } else {
     echo "0 results";
 }
