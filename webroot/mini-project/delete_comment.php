@@ -12,7 +12,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
-$sql="DELETE FROM commnets WHERE commentId= ;";
+$sql="DELETE FROM commnets WHERE commentId=$commentId;";
 if ($conn->query($sql) === TRUE) {
 
 header("Location:view_post.php?blogNum=$blogNum");

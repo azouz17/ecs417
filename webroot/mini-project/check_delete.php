@@ -35,7 +35,7 @@ $commentId=$_GET['commentId'];
 $blogNum=$_GET['blogNum'];
 echo $blogNum;
 echo $commentId;
-/*
+
 if(isset($_SESSION['loggedin']))
 {
 
@@ -45,7 +45,7 @@ if(isset($_SESSION['loggedin']))
 }
 
 else{
-  header("Location:login_delete.php?blogNum=$blogNum&comment=$comment");
+  header("Location:login_delete.php?blogNum=$blogNum&commentId=$commentId");
   exit();
 }
-*/?>
+?>
