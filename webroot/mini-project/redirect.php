@@ -3,41 +3,7 @@
   <meta charset="utf-8">
   <title> </title>
 </head>
-<?php
-session_start();
 
-//Expire the session if user is inactive for 30
-//minutes or more.
-$expireAfter = 1;
-
-//Check to see if our "last action" session
-//variable has been set.
-if(isset($_SESSION['last_action'])){
-
-    //Figure out how many seconds have passed
-    //since the user was last active.
-    $secondsInactive = time() - $_SESSION['last_action'];
-
-    //Convert our minutes into seconds.
-    $expireAfterSeconds = $expireAfter * 60;
-
-    //Check to see if they have been inactive for too long.
-    if($secondsInactive >= $expireAfterSeconds){
-        //User has been inactive for too long.
-        //Kill their session.
-        session_unset();
-        session_destroy();
-        header("Location:portfolio.html");
-    }
-
-}
-
-//Assign the current timestamp as the user's
-//latest activity
-
-
-
- ?>
  <?php
 session_start();
 $user =$_GET["username"];
@@ -64,7 +30,8 @@ if ($result->num_rows > 0) {
 }
 if($row["username"]===$user and $row["password"]===$pass){
   $_SESSION['state']="yes";
-  $_SESSION['last_action']=time();
+  $_SESSION['time']=time();
+
   header("Location:add_entry.html");
 exit();
 }
