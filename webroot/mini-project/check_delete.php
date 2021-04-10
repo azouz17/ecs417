@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -30,17 +31,18 @@ if(isset($_SESSION['time'])){
 
 <?php
 session_start();
+$commentId=$_GET['commentId'];
 $blogNum=$_GET['blogNum'];
-$comment=$_GET['comment'];
-if(isset($_SESSION['comment']))
+if(isset($_SESSION['delete']))
 {
 
-  header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
+  header("Location:delete_comment.php?commentId
+  =$commentId");
   exit();
 
 }
 
 else{
-  header("Location:login_blog.php?blogNum=$blogNum&comment=$comment");
+  header("Location:login_delete.php?blogNum=$blogNum&comment=$comment");
   exit();
 }?>
