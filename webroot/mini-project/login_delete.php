@@ -11,6 +11,8 @@
       $blogNum=$_GET['blogNum'];
       $comment=$_GET['comment'];
       $commentId=$_GET['commentId'];
+      $message=$_GET['message'];
+      echo $message;
       ?>
         <form method="GET" action="redirect_delete.php">
           <fieldset>

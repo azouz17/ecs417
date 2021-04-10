@@ -39,18 +39,18 @@ if ($result->num_rows > 0) {
       session_start();
       $_SESSION['loggedin']="yes";
       $_SESSION['admin']="yes";
-        header("Location:delete_comment.php?blogNum=$blogNum&commentId=$commentId");
+        header("Location:delete_post.php?blogNum=$blogNum&commentId=$commentId");
       exit();
       }
       else if($login[0][$counter]===$user and $login[1][$counter]===$pass and $login[2][$counter]===0)
       {
         $message="cant delete not admin";
-        header("Location:login_delete.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
+        header("Location:login_post.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
         exit();
       }
       else{
         $message="incorrect login information";
-        header("Location:login_delete.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
+        header("Location:login_post.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
         exit();
       }
       $counter++;
