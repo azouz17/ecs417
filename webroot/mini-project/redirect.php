@@ -5,6 +5,7 @@
 </head>
 <?php
 session_start();
+echo $_SESSION['last_action'];
 //Expire the session if user is inactive for 30
 //minutes or more.
 $expireAfter = 5;
@@ -64,7 +65,7 @@ if ($result->num_rows > 0) {
 if($row["username"]===$user and $row["password"]===$pass){
   $_SESSION['state']="yes";
   $_SESSION['last_action']=time();
-  header("Location:add_entry.html");
+  //header("Location:add_entry.html");
 exit();
 }
 else{
