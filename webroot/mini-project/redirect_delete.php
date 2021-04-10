@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   $counter=0;
     // output data of each row
-    $row = $result->fetch_assoc()
+    $row = $result->fetch_assoc();
 
       if($row['username']===$user and $row['password']===$pass and $row['admin']===1){
 
@@ -49,6 +49,7 @@ if ($result->num_rows > 0) {
         header("Location:login_delete.php?message=$message&blogNum=$blogNum&commentId=$commentId",true,301);
         exit();
       }
+
 
 
     }
