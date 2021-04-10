@@ -38,6 +38,7 @@ if($row["username"]===$user and $row["password"]===$pass){
 session_start();
 $_SESSION['loggedin']="yes";
 $_SESSION['admin']="yes";
+$_SESSION['time']=time();
   header("Location:delete_post.php?blogNum=$blogNum&commentId=$commentId");
 exit();
 }

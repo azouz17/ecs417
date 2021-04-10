@@ -60,6 +60,7 @@ $conn->close();
 <link rel="stylesheet" href="poststyle.css" type="text/css">
 </head>
 <body>
+  <button> <a href="logout.php"> Logout </a></button>
   <h1> Blog Post</h1>
   <div>
     <h3><?php echo $title; ?></h3>

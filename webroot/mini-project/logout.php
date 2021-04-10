@@ -10,7 +10,7 @@ session_destroy();
    <title> logout</title>
  </head>
  <body>
-   <h2 style="font-weight:bold color:blue"> You have been logged becuase your session time has ended</h2>
+   <h2 style="font-weight:bold color:blue"> You have been logged out</h2>
    <button><a href="portfolio.html"> Back to Portfolio</a></button>
    <button><a href="blog.php"> Back to Blog</a></button>
  </body>

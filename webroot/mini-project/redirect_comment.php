@@ -34,6 +34,7 @@ if($row["username"]===$user and $row["password"]===$pass){
 
 session_start();
 $_SESSION['loggedin']="yes";
+$_SESSION['time']=time();
   header("Location:add_comment.php?blogNum=$blogNum&comment=$comment");
 exit();
 }
