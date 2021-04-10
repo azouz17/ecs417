@@ -70,7 +70,7 @@ $conn->close();
         ?>
       <tr>
         <td><?php echo $comments[0][$i];?></td>
-        <td><a href="check_delete.php?blogNum<?php echo $blogNum;?>&commentId<?php echo $comments[1][$i] ;?>"> Delete</a></td>
+        <td><a href="check_delete.php?blogNum=<?php echo $blogNum;?>&commentId=<?php echo $comments[1][$i] ;?>"> Delete</a></td>
 
       </tr>
       <?php $i++;
