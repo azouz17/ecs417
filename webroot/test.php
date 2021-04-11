@@ -16,10 +16,12 @@ die("Connection failed: " . $conn->connect_error);
 $sql="SELECT admin FROM login";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
+  echo "Inside if statment";
     // output data of each row
     echo $row['admin'];
   }
   else{
+    echo "Inside else statment";
     echo"0 reults";
   }
   $conn->close();
