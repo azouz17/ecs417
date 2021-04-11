@@ -19,8 +19,9 @@ if ($result->num_rows > 0) {
     // output data of each row
     echo $row['admin'];
   }
-  $conn->close();
   else{
     echo"0 reults";
   }
+  $conn->close();
+
   ?>
