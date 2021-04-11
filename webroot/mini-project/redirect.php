@@ -24,7 +24,7 @@ $comment=$_GET['comment'];
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
-$sql="SELECT username,password FROM login WHERE (username='$user' AND password='$pass')";
+$sql="SELECT username,password,admin FROM login WHERE (username='$user' AND password='$pass')";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
     //  header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
       //exit();
     }
-else  if($row['username']===$user and $row['password']===$pass and $row['admin']==='1')
+else  if($row['username']===$user and $row['password']===$pass and $row['admin']===1)
   {
     echo "inside corrct username and password and admin is true";
     $_SESSION['loggedin']="yes";
@@ -54,7 +54,7 @@ else  if($row['username']===$user and $row['password']===$pass and $row['admin']
   //  header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
   //  exit();
   }
-  else if($row['username']===$user and $row['password']===$pass and $row['admin']==='0')
+  else if($row['username']===$user and $row['password']===$pass and $row['admin']===0)
   {
     echo "inside corrct username and password and admin is false";
     $message="cant login Not Admin";
