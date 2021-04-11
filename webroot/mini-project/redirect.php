@@ -32,6 +32,7 @@ if ($result->num_rows > 0) {
       echo "inside main if statment <br>";
 
       echo $row['username']."<br>";
+      echo $row['admin']."<br>";
       echo $row['password']."<br>";
       echo $user."<br>";
       echo $pass."<br>";
