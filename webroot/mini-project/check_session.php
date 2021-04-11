@@ -34,7 +34,12 @@ $comment=$_GET['comment'];
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
-if(isset($_SESSION['admin'])  )
+if(isset($_SESSION['loggedin'])and $page="add_comment.php")
+{
+  header("Location:$page?blogNum=$blogNum&commentId=$commentId&comment=$comment");
+  exit();
+}
+else if(isset($_SESSION['admin']))
 {
   header("Location:$page?blogNum=$blogNum&commentId=$commentId&comment=$comment");
   exit();
