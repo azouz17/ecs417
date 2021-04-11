@@ -49,7 +49,7 @@ else if($row["username"]===$user and $row["password"]===$pass and $row['admin']=
 exit();
 }
 else if($row["username"]===$user and $row["password"]===$pass and $row['admin']===0){
-  $message="can login not admin"
+  $message="can login not admin";
 
   header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
   exit();
