@@ -17,7 +17,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 // Checks connection
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
-
+}
 
 
 $comment=$_GET['comment'];
