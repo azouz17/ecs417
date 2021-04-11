@@ -32,7 +32,7 @@ session_destroy();
   color: white;
   position: absolute;
   margin-top: 7em;
-  margin-left: 25em;
+  margin-left: 40em;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -42,7 +42,7 @@ session_destroy();
 }
 h2{
   font-weight: bold;
-  text-align:center; 
+  text-align:center;
 
 }
 </style>
