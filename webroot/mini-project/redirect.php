@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
       echo $row['username']."<br>";
       echo $row['password']."<br>";
       echo $user."<br>";
-      echo $pass."<br>"
+      echo $pass."<br>";
 
     if($row['username']===$user and $row['password']===$pass and $page==="add_comment.php")
     {
