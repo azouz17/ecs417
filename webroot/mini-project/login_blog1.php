@@ -12,10 +12,12 @@ $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
 $comment=$_GET['comment'];
+$message=$_GET['message'];
        ?>
         <form method="GET" action="redirect.php">
           <fieldset>
             <h2> Log In:</h2>
+            <h4><?php echo $message ?></h4>
             <table>
               <tr>
           <td>  <label> Username:</label> </td>
