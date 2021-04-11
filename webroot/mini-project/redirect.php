@@ -28,6 +28,7 @@ $sql="SELECT username,password FROM login WHERE (username=$user AND password=$pa
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
+      $row = $result->fetch_assoc();
     if($row['username']===$user and $row['password']===$pass and $page==="add_comment.php")
     {
       $_SESSION['loggedin']="yes";
