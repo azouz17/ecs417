@@ -80,7 +80,7 @@ $conn->close();
       <?php $i++;
        endwhile?>
     </table>
-    <form method="GET" action="check_session_.php">
+    <form method="GET" action="check_session.php">
       <fielset>
         <label>Comment:</label> <br>
         <textarea type="text" name="comment" rows="3" cols="20"></textarea>
