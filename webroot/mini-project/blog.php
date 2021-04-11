@@ -11,7 +11,7 @@
 
   </head>
   <body>
-    <button> <a href="check_session.php"> Add Entry </a></button>
+    <button> <a href="check_session.php?page=add_entry.html"> Add Entry </a></button>
     <button> <a href="logout.php"> Logout </a></button>
     <button> <a href="portfolio.html">Portfolio</a></button>
     <?php

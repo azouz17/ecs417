@@ -30,13 +30,14 @@ if(isset($_SESSION['time'])){
 
 <?php
 session_start();
-if(isset($_SESSION['state']))
+$page=$_GET['page'];
+if(isset($_SESSION['admin'])  )
 {
-  header("Location:add_entry.html");
+  header("Location:$page");
   exit();
 
 }
 else{
-  header("Location:login_blog.html");
+  header("Location:login_blog1.php?page=$page");
   exit();
 }?>

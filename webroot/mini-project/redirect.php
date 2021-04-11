@@ -19,6 +19,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
+$page=$_GET['page'];
 $sql="SELECT username,password,userId FROM login";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -29,16 +30,16 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 if($row["username"]===$user and $row["password"]===$pass){
-  $_SESSION['state']="yes";
+  $_SESSION['admin']="yes";
   $_SESSION['loggedin']="yes";
   $_SESSION['time']=time();
 
-  header("Location:add_entry.html");
+  header("Location:$page");
 exit();
 }
 else{
 
-  header("Location:login_blog.html",true,301);
+  header("Location:login_blog1.php?page=$page",true,301);
   exit();
 }
 
