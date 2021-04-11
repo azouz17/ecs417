@@ -29,6 +29,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
       $row = $result->fetch_assoc();
+      echo $row["username"];
+      echo $row["password"];
+      /*
     if($row['username']===$user and $row['password']===$pass and $page==="add_comment.php")
     {
       $_SESSION['loggedin']="yes";
@@ -52,6 +55,7 @@ else {
 $message="incorrect login credentials";
 header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
 }
+*/
 
 $conn->close();
 
