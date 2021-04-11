@@ -24,37 +24,28 @@ $comment=$_GET['comment'];
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
-$sql="SELECT username,password,admin FROM login";
+$sql="SELECT username,password FROM login WHERE username=$user password=$pass";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-  while($row = $result->fetch_assoc())
+    if($row['username']===$user and $row['password']===$pass and $page==="add_comment.php")
     {
-
-
-if($row["username"]===$user and $row["password"]===$pass and $page==="add_comment.php")
-{
-  $_SESSION['loggedin']="yes";
-  $_SESSION['time']=time();
-  header("Location:$page?blogNum=$blogNum&commentId=$commentId&comment=$comment");
-exit();
-}
-
-else if($row["username"]===$user and $row["password"]===$pass and $row['admin']===1){
-  $_SESSION['admin']="yes";
-  $_SESSION['loggedin']="yes";
-  $_SESSION['time']=time();
-
-  header("Location:$page?blogNum=$blogNum&commentId=$commentId");
-exit();
-}
-else if($row["username"]===$user and $row["password"]===$pass and $row['admin']===0){
-  $message="can login not admin";
-
-  header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
-  exit();
-}
-}
+      $_SESSION['loggedin']="yes";
+      $_SESSION['time']=time();
+      header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
+    }
+else  if($row['username']===$user and $row['password']===$pass and $row['admin']===1)
+  {
+    $_SESSION['loggedin']="yes";
+    $_SESSION['admin']="yes";
+    $_SESSION['time']=time();
+    header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
+  }
+  else if($row['username']===$user and $row['password']===$pass and $row['admin']===0)
+  {
+    $message="cant login Not Admin";
+    header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
+  }
 }
 else {
 $message="incorrect login credentials";
