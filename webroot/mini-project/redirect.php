@@ -21,6 +21,7 @@ if ($conn->connect_error) {
 }
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
+$commentId=$_GET['commentId'];
 $sql="SELECT username,password,userId FROM login";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -35,12 +36,12 @@ if($row["username"]===$user and $row["password"]===$pass){
   $_SESSION['loggedin']="yes";
   $_SESSION['time']=time();
 
-  header("Location:$page?blogNum=$blogNum");
+  header("Location:$page?blogNum=$blogNum&commentId=$commentId");
 exit();
 }
 else{
 
-  header("Location:login_blog1.php?page=$page&blogNum=$blogNum",true,301);
+  header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId",true,301);
   exit();
 }
 

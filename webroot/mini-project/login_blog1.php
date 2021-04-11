@@ -10,6 +10,7 @@
       <?php
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
+$commentId=$_GET['commentId'];
        ?>
         <form method="GET" action="redirect.php">
           <fieldset>
@@ -21,11 +22,12 @@ $blogNum=$_GET['blogNum'];
           </tr>
           <tr>
           <td>  <label> Password:</label></td>
-          <td>  <input required type="text" name="password"></td>
+          <td>  <input required type="password" name="password"></td>
           </tr>
           </table>
           <input type="hidden" name="page" value="<?php echo $page?>">
           <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
+            <input type="hidden" name="commentId" value="<?php echo $commentId?>">
           <br>
 
             <button type="submit"> Submit </a></button>
