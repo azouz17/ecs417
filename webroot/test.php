@@ -20,4 +20,7 @@ if ($result->num_rows > 0) {
     echo $row['admin'];
   }
   $conn->close();
+  else{
+    echo"0 reults";
+  }
   ?>
