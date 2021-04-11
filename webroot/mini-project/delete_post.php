@@ -1,7 +1,6 @@
 <?php
 session_start();
-$user =$_GET["username"];
-$pass =$_GET["password"];
+
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("DATABASE_USER");

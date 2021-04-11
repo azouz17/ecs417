@@ -9,6 +9,7 @@
     <body>
       <?php
 $page=$_GET['page'];
+$blogNum=$_GET['blogNum'];
        ?>
         <form method="GET" action="redirect.php">
           <fieldset>
@@ -24,6 +25,7 @@ $page=$_GET['page'];
           </tr>
           </table>
           <input type="hidden" name="page" value="<?php echo $page?>">
+          <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
           <br>
 
             <button type="submit"> Submit </a></button>

@@ -120,7 +120,7 @@ while( $counter<count($blog[0])) :
 
         </div>
       </a>
-      <a href="check_post.php?blogNum=<?php echo $blog[3][$counter]; ?>"> Delete </a>
+      <a href="check_session.php?page=delete_post.php&blogNum=<?php echo $blog[3][$counter]; ?>"> Delete </a>
         <?php
         $counter++;
          endwhile

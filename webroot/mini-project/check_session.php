@@ -31,13 +31,14 @@ if(isset($_SESSION['time'])){
 <?php
 session_start();
 $page=$_GET['page'];
+$blogNum=$_GET['blogNum'];
 if(isset($_SESSION['admin'])  )
 {
-  header("Location:$page");
+  header("Location:$page?blogNum=$blogNum");
   exit();
 
 }
 else{
-  header("Location:login_blog1.php?page=$page");
+  header("Location:login_blog1.php?page=$page&blogNum=$blogNum");
   exit();
 }?>
