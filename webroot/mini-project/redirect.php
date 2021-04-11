@@ -56,7 +56,7 @@ $message="incorrect login credentials";
 header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
 }
 */
-
+}
 $conn->close();
 
 
