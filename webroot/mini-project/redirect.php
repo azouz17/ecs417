@@ -36,6 +36,7 @@ if ($result->num_rows > 0) {
       $_SESSION['loggedin']="yes";
       $_SESSION['time']=time();
       header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
+      exit();
     }
 else  if($row['username']===$user and $row['password']===$pass and $row['admin']===1)
   {
@@ -43,16 +44,19 @@ else  if($row['username']===$user and $row['password']===$pass and $row['admin']
     $_SESSION['admin']="yes";
     $_SESSION['time']=time();
     header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
+    exit();
   }
   else if($row['username']===$user and $row['password']===$pass and $row['admin']===0)
   {
     $message="cant login Not Admin";
     header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
+    exit();
   }
 }
 else {
 $message="incorrect login credentials";
 header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
+exit();
 }
 
 
