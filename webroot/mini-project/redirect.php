@@ -24,7 +24,7 @@ $comment=$_GET['comment'];
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
-$sql="SELECT username,password FROM login WHERE username=$user password=$pass";
+$sql="SELECT username,password FROM login WHERE (username=$user AND password=$pass)";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
