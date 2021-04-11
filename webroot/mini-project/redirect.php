@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
     else {
     echo "0 results";
 }
-if($row["username"]===$user and $row["password"]===$pass and $page="add_comment.php")
+if($row["username"]===$user and $row["password"]===$pass and $page==="add_comment.php")
 {
   $_SESSION['loggedin']="yes";
   $_SESSION['time']=time();
