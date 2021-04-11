@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
     //  header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
       //exit();
     }
-else  if($row['username']===$user and $row['password']===$pass and $row['admin']===1)
+else  if($row['username']===$user and $row['password']===$pass )
   {
     echo "inside corrct username and password and admin is true";
     $_SESSION['loggedin']="yes";
@@ -53,7 +53,7 @@ else  if($row['username']===$user and $row['password']===$pass and $row['admin']
   //  header("Location:$page?blogNum=$blogNum&comment=$comment&commentId=$commentId");
   //  exit();
   }
-  else if($row['username']===$user and $row['password']===$pass and $row['admin']===0)
+  else if($row['username']===$user and $row['password']===$pass )
   {
     echo "inside corrct username and password and admin is false";
     $message="cant login Not Admin";
