@@ -29,7 +29,12 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
       $row = $result->fetch_assoc();
-      echo "inside main if statment";
+      echo "inside main if statment <br>";
+
+      echo $row['username']."<br>";
+      echo $row['password']."<br>";
+      echo $user."<br>";
+      echo $pass."<br>"
 
     if($row['username']===$user and $row['password']===$pass and $page==="add_comment.php")
     {
@@ -57,7 +62,11 @@ else  if($row['username']===$user and $row['password']===$pass and $row['admin']
   }
 }
 else {
-  echo "inside else statment no results for username and password";
+  echo $row['username']."<br>";
+  echo $row['password']."<br>";
+  echo $user."<br>";
+  echo $pass."<br>";
+  echo "<br> inside else statment no results for username and password";
 $message="incorrect login credentials";
 
 //header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment&message=$message",true,301);
