@@ -30,16 +30,17 @@ if(isset($_SESSION['time'])){
 
 <?php
 session_start();
+$comment=$_GET['comment'];
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
 if(isset($_SESSION['admin'])  )
 {
-  header("Location:$page?blogNum=$blogNum&commentId=$commentId");
+  header("Location:$page?blogNum=$blogNum&commentId=$commentId&comment=$comment");
   exit();
 
 }
 else{
-  header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId");
+  header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment");
   exit();
 }?>

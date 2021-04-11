@@ -80,11 +80,12 @@ $conn->close();
       <?php $i++;
        endwhile?>
     </table>
-    <form method="GET" action="check_session_comment.php">
+    <form method="GET" action="check_session_.php">
       <fielset>
         <label>Comment:</label> <br>
         <textarea type="text" name="comment" rows="3" cols="20"></textarea>
         <input type="hidden" name="blogNum" value="<?php echo $blogNum?>">
+        <input type="hidden" name="page" value="add_comment.php">
         <br>
         <button type="submit">Add comment </a></button>
       </fielset>

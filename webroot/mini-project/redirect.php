@@ -19,6 +19,7 @@ $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($conn->connect_error) {
  die("Connection failed: " . $conn->connect_error);
 }
+$comment=$_GET['comment'];
 $page=$_GET['page'];
 $blogNum=$_GET['blogNum'];
 $commentId=$_GET['commentId'];
@@ -31,7 +32,15 @@ if ($result->num_rows > 0) {
     else {
     echo "0 results";
 }
-if($row["username"]===$user and $row["password"]===$pass){
+if($row["username"]===$user and $row["password"]===$pass and $page="add_comment.php")
+{
+  $_SESSION['loggedin']="yes";
+  $_SESSION['time']=time();
+  header("Location:$page?blogNum=$blogNum&commentId=$commentId&comment=$comment");
+exit();
+}
+
+else if($row["username"]===$user and $row["password"]===$pass){
   $_SESSION['admin']="yes";
   $_SESSION['loggedin']="yes";
   $_SESSION['time']=time();
@@ -41,7 +50,7 @@ exit();
 }
 else{
 
-  header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId",true,301);
+  header("Location:login_blog1.php?page=$page&blogNum=$blogNum&commentId=$commentId&comment=$comment",true,301);
   exit();
 }
 
