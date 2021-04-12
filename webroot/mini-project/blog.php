@@ -32,7 +32,9 @@
 $blog=array(
   array(),array(),array(),array()
 );
+$year=$_GET['year'];
 
+$month=$_GET[' month'];
 
 $counter=0;
 
