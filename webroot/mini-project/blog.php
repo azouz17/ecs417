@@ -127,29 +127,29 @@ $date2=$blog[2][$x];
   <fieldset>
 
 
-Month
+<label>Month</label>
 <SELECT  name="month">
   <option value=""> All</option>
-  <option value="1" <?php if($month==="1"){echo "selected";}?> January</option>
-  <option value="2"> February</option>
-  <option value="3"> March</option>
-  <option value="4"> April</option>
-  <option value="5"> May</option>
-  <option value="6"> June</option>
-  <option value="7"> July</option>
-  <option value="8"> August</option>
-  <option value="9"> September</option>
-  <option value="10"> October</option>
-  <option value="11"> November</option>
-  <option value="12"> December</option>
+  <option value="1" <?php if($month==="1"){echo "selected";}?>> January</option>
+  <option value="2" <?php if($month==="2"){echo "selected";}?>> February</option>
+  <option value="3" <?php if($month==="3"){echo "selected";}?>> March</option>
+  <option value="4" <?php if($month==="4"){echo "selected";}?>> April</option>
+  <option value="5" <?php if($month==="5"){echo "selected";}?>> May</option>
+  <option value="6" <?php if($month==="6"){echo "selected";}?>> June</option>
+  <option value="7" <?php if($month==="7"){echo "selected";}?>> July</option>
+  <option value="8" <?php if($month==="8"){echo "selected";}?>> August</option>
+  <option value="9" <?php if($month==="9"){echo "selected";}?>> September</option>
+  <option value="10" <?php if($month==="10"){echo "selected";}?>> October</option>
+  <option value="11" <?php if($month==="11"){echo "selected";}?>> November</option>
+  <option value="12"<?php if($month==="12"){echo "selected";}?>> December</option>
 </select>
+<lable>Year</label>
 
-Year
 <SELECT name="year">
   <option value=""> All</option>
-  <option value="2021"> 2021</option>
-  <option value="2022"> 2022</option>
-  <option value="2023"> 2023</option>
+  <option value="2021" <?php if($year==="2021"){echo "selected";}?>> 2021</option>
+  <option value="2022" <?php if($year==="2022"){echo "selected";}?>> 2022</option>
+  <option value="2023" <?php if($year==="2023"){echo "selected";}?>> 2023</option>
 </select>
 <button type="submit">Submit</button>
 
