@@ -32,8 +32,17 @@
 $blog=array(
   array(),array(),array(),array()
 );
+$month=$_GET['month'];
+$year=$_GET['year'];
 $counter=0;
-$sql = "SELECT text,title,date,blogNum FROM blog";
+if($month="" or $year="")
+{
+ $sql = "SELECT text,title,date,blogNum FROM blog";
+}
+else{
+  $sql = "SELECT text,title,date,blogNum FROM blog WHERE month(date)=$month and year(date)=$year";
+}
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -108,6 +117,38 @@ $date2=$blog[2][$x];
 ?>
 
 <h1> Blog Entries</h1>
+<form method="get" action="blog.php">
+  <fieldset>
+
+
+Month
+<SELECT  name="month">
+  <option value=""> All</option>
+  <option value="1"> January</option>
+  <option value="2"> February</option>
+  <option value="3"> March</option>
+  <option value="4"> April</option>
+  <option value="5"> May</option>
+  <option value="6"> June</option>
+  <option value="7"> July</option>
+  <option value="8"> August</option>
+  <option value="9"> September</option>
+  <option value="10"> October</option>
+  <option value="11"> November</option>
+  <option value="12"> December</option>
+</select>
+
+Year
+<SELECT name="year">
+  <option value=""> All</option>
+  <option value="2021"> 2021</option>
+  <option value="2022"> 2022</option>
+  <option value="2023"> 2023</option>
+</select>
+<button type="submit">Submit</button>
+
+  </fieldset>
+</form>
 <p style="color:black; font-weight: bold"> -Click on blog title to view full post and comments</p>
 <?php
 $counter=0;
