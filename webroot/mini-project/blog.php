@@ -130,7 +130,7 @@ $date2=$blog[2][$x];
 Month
 <SELECT  name="month">
   <option value=""> All</option>
-  <option value="1" <?php if($month==="1"){echo "selected"}?> January</option>
+  <option value="1" <?php if($month==="1"){echo "selected";}?> January</option>
   <option value="2"> February</option>
   <option value="3"> March</option>
   <option value="4"> April</option>
