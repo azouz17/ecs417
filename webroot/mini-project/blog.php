@@ -44,7 +44,9 @@ else{
 }
 
 $result = $conn->query($sql);
-
+echo $sql;
+echo $year;
+echo $month;
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
@@ -56,7 +58,7 @@ if ($result->num_rows > 0) {
     $counter++;
   }
 } else {
-  echo "0 results";
+  echo "0 blog entries";
 }
  $conn->close();
 $temp=0;
