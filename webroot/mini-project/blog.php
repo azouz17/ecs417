@@ -34,8 +34,11 @@ $blog=array(
 );
 $month=$_GET['month'];
 $year=$_GET['year'];
+echo $year;
+echo $month;
+
 $counter=0;
-if($month="" or $year="")
+if($month==="" or $year==="")
 {
  $sql = "SELECT text,title,date,blogNum FROM blog";
 }
