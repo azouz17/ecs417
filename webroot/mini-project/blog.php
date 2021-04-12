@@ -36,22 +36,15 @@ $blog=array(
 
 $counter=0;
 
-if (is_int($month) && is_int($year))
-{
-$sql = "SELECT text,title,date,blogNum FROM blog WHERE month(date)=$month and year(date)=$year";
 
-}
-else {
- $sql = "SELECT text,title,date,blogNum FROM blog";
-}
 
-/*if($month==="" or $year==="" or is_null($month) or is_null($year))
+if($month==="" or $year==="" or is_null($month) or is_null($year))
 {
  $sql = "SELECT text,title,date,blogNum FROM blog";
 }
 else{
   $sql = "SELECT text,title,date,blogNum FROM blog WHERE month(date)=$month and year(date)=$year";
-}*/
+}
 
 $result = $conn->query($sql);
 
