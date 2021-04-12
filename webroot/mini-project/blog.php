@@ -32,25 +32,29 @@
 $blog=array(
   array(),array(),array(),array()
 );
-$month=$_GET['month'];
-$year=$_GET['year'];
-echo $year;
-echo $month;
+
 
 $counter=0;
 
-if($month==="" or $year==="" or is_null($month) or is_null($year))
+if (is_int($month) and  is_int($year))
+{
+$sql = "SELECT text,title,date,blogNum FROM blog WHERE month(date)=$month and year(date)=$year";
+
+}
+else {
+ $sql = "SELECT text,title,date,blogNum FROM blog";
+}
+
+/*if($month==="" or $year==="" or is_null($month) or is_null($year))
 {
  $sql = "SELECT text,title,date,blogNum FROM blog";
 }
 else{
   $sql = "SELECT text,title,date,blogNum FROM blog WHERE month(date)=$month and year(date)=$year";
-}
+}*/
 
 $result = $conn->query($sql);
-echo $sql;
-echo $year;
-echo $month;
+
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
