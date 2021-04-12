@@ -119,7 +119,7 @@ $date2=$blog[2][$x];
 ?>
 
 <h1> Blog Entries</h1>
-<form method="get" action="blog.php">
+<form method="GET" action="blog.php">
   <fieldset>
 
 
