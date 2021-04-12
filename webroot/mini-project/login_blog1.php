@@ -17,7 +17,7 @@ $message=$_GET['message'];
         <form method="GET" action="redirect.php">
           <fieldset>
             <h2> Log In:</h2>
-            <h4><?php echo $message ?></h4>
+            <h4 style="color:red"><?php echo $message ?></h4>
             <table>
               <tr>
           <td>  <label> Username:</label> </td>
