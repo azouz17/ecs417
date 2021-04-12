@@ -35,8 +35,7 @@ $blog=array(
 $year=$_GET['year'];
 
 $month=$_GET['month'];
- echo $month;
- echo $year;
+ 
 $counter=0;
 
 
