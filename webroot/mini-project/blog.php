@@ -145,6 +145,7 @@ $date2=$blog[2][$x];
 </select>
 <lable>Year</label>
 
+<!-- in future versions the year will set dynamically according to the current year-->
 <SELECT name="year">
   <option value=""> All</option>
   <option value="2021" <?php if($year==="2021"){echo "selected";}?>> 2021</option>
